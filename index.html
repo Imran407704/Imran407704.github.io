@@ -1,39 +1,39 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Imran Shaikh — Penetration Tester &amp; Bug Hunter</title>
-  <meta name="description" content="Imran Shaikh is a penetration tester and bug hunter working across web, API, Android and network security. Selected tools, research and contact links.">
+  <title>Imran Shaikh | Penetration tester and bug hunter</title>
+  <meta name="description" content="Imran Shaikh is a penetration tester and bug hunter working across web, API, Android and network security. Selected tools, research archives and contact links.">
   <meta name="author" content="Imran Shaikh">
-  <meta name="theme-color" content="#050706">
+  <meta name="theme-color" content="#000000">
   <link rel="canonical" href="https://imran407704.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/avatar.jpg">
-  <link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://imran407704.github.io/">
-  <meta property="og:title" content="Imran Shaikh — Penetration Tester &amp; Bug Hunter">
-  <meta property="og:description" content="Web, API, Android and network security. Open source tooling, research and field notes.">
+  <meta property="og:title" content="Imran Shaikh | Penetration tester and bug hunter">
+  <meta property="og:description" content="Web, API, Android and network security. Open source tooling, research archives and field notes.">
   <meta property="og:image" content="https://imran407704.github.io/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@imran407704">
-  <meta name="twitter:title" content="Imran Shaikh — Penetration Tester &amp; Bug Hunter">
-  <meta name="twitter:description" content="Web, API, Android and network security. Open source tooling, research and field notes.">
+  <meta name="twitter:title" content="Imran Shaikh | Penetration tester and bug hunter">
+  <meta name="twitter:description" content="Web, API, Android and network security. Open source tooling, research archives and field notes.">
   <meta name="twitter:image" content="https://imran407704.github.io/assets/og.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
   <script>
     document.documentElement.classList.add('js');
     window.setTimeout(function () {
-      if (!document.documentElement.classList.contains('js-ready')) {
-        document.documentElement.classList.remove('js');
-      }
-    }, 2500);
+      if (!window.__portfolioReady) document.documentElement.classList.remove('js');
+    }, 6000);
   </script>
   <script type="application/ld+json">
   {
@@ -55,38 +55,48 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
   <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+  <div class="liquid" aria-hidden="true">
+    <span class="liquid-blob liquid-blob-1"></span>
+    <span class="liquid-blob liquid-blob-2"></span>
+    <span class="liquid-blob liquid-blob-3"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
 
   <svg class="icon-sprite" aria-hidden="true" focusable="false">
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
     <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
-    <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.55v-2.1c-3.2.7-3.88-1.36-3.88-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.14 1.18a10.9 10.9 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.35.78 1.04.78 2.1v3.11c0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></symbol>
-    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4v16h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-8.5c0-2.03-.04-4.64-2.83-4.64-2.83 0-3.27 2.21-3.27 4.5V24H8V8z"/></symbol>
-    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.9-6.4L6.3 22H3.2l7.3-8.3L2.5 2h6.3l4.5 5.9L18.9 2zm-1.1 18h1.7L7.1 3.9H5.3L17.8 20z"/></symbol>
-    <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.55v-2.1c-3.2.7-3.88-1.36-3.88-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.14 1.18a10.9 10.9 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.35.78 1.04.78 2.1v3.11c0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4v16h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-8.5c0-2.03-.04-4.64-2.83-4.64-2.83 0-3.27 2.21-3.27 4.5V24H8V8z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.9-6.4L6.3 22H3.2l7.3-8.3L2.5 2h6.3l4.5 5.9L18.9 2zm-1.1 18h1.7L7.1 3.9H5.3L17.8 20z"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
     <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
     <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.4 7.7-8 9-4.6-1.3-8-4-8-9V6l8-3z"/><path d="m8.5 12 2.3 2.3 4.7-5"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 6 9 6-9 6V6z"/></symbol>
-    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></symbol>
   </svg>
 
   <header class="site-header">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="#top" aria-label="Imran Shaikh, back to top">
+    <nav class="nav glass" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="0x407704, Imran Shaikh, back to top">
         <span class="brand-mark">0x</span><span class="brand-id">407704</span>
       </a>
       <div class="nav-links" id="nav-links">
         <a href="#work" data-nav="work">Work</a>
         <a href="#arsenal" data-nav="arsenal">Arsenal</a>
         <a href="#about" data-nav="about">About</a>
+        <a href="#broadcast" data-nav="broadcast">Broadcast</a>
         <a href="#contact" data-nav="contact">Contact</a>
       </div>
       <div class="nav-actions">
-        <button class="cmd-trigger" type="button" data-cmd-open aria-haspopup="dialog" aria-controls="command-menu">
+        <button class="cmd-trigger" type="button" data-cmd-open aria-haspopup="dialog" aria-controls="command-menu" aria-label="Open command menu">
           <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
           <span class="cmd-trigger-label">Menu</span>
           <kbd><span class="kbd-mod">Ctrl</span>K</kbd>
@@ -94,118 +104,152 @@
         <a class="icon-link" href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
           <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
         </a>
-        <button class="nav-toggle" type="button" data-cmd-open aria-label="Open menu" aria-haspopup="dialog" aria-controls="command-menu">
-          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        <button class="nav-toggle" type="button" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="nav-toggle-box" aria-hidden="true"><i></i><i></i></span>
         </button>
       </div>
     </nav>
   </header>
 
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <p class="caption-3 mobile-menu-label">Navigation</p>
+      <nav class="mobile-menu-links" aria-label="Mobile">
+        <a href="#work"><span>01</span>Work</a>
+        <a href="#arsenal"><span>02</span>Arsenal</a>
+        <a href="#about"><span>03</span>About</a>
+        <a href="#broadcast"><span>04</span>Broadcast</a>
+        <a href="#contact"><span>05</span>Contact</a>
+      </nav>
+      <div class="mobile-menu-foot">
+        <a href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer">GitHub <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        <a href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+  </div>
+
   <main id="main">
     <section class="hero" id="top">
-      <canvas class="hero-rain" id="rain" aria-hidden="true"></canvas>
+      <canvas class="hero-canvas" id="scene" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="status-line">
+          <p class="status-line caption-3">
             <span class="live-dot" aria-hidden="true"></span>
             <span>STATUS: ONLINE</span>
             <span class="status-sep">/</span>
             <span>NODE: 127.0.0.1</span>
           </p>
-          <h1 class="hero-title">Imran<br><span class="hero-title-line">Shaikh<span class="hero-cursor" aria-hidden="true">_</span></span></h1>
-          <p class="hero-role">PENETRATION TESTER / BUG HUNTER</p>
-          <p class="hero-lede">I test web, API, Android and network surfaces, then write the finding so teams can fix it.</p>
+
+          <h1 class="heading-1 hero-title">
+            Penetration testing<br>
+            that ends in a fix.
+          </h1>
+
+          <p class="body-3 hero-lede">
+            I am Imran Shaikh, a penetration tester and bug hunter. I test web, API,
+            Android and network surfaces, then write the finding so your team can
+            ship the fix.
+          </p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#work">
-              View selected work
+            <a class="btn btn-primary button-md" href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer">
+              Message on LinkedIn
               <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
-            <a class="btn btn-ghost" href="#arsenal">Read the arsenal</a>
+            <a class="btn btn-glass button-md" href="#work">
+              View selected work
+            </a>
           </div>
-          <dl class="hero-stats" aria-label="GitHub telemetry">
+
+          <dl class="hero-stats" aria-label="Live GitHub telemetry">
             <div>
-              <dt>REPOS</dt>
-              <dd data-stat="repos">27</dd>
+              <dt class="caption-3">Repositories</dt>
+              <dd class="title-1"><span data-stat="repos">27</span></dd>
             </div>
             <div>
-              <dt>STARS</dt>
-              <dd data-stat="stars">129</dd>
+              <dt class="caption-3">Stars</dt>
+              <dd class="title-1"><span data-stat="stars">129</span></dd>
             </div>
             <div>
-              <dt>FOLLOWERS</dt>
-              <dd data-stat="followers">31</dd>
+              <dt class="caption-3">Followers</dt>
+              <dd class="title-1"><span data-stat="followers">31</span></dd>
             </div>
             <div>
-              <dt>UPTIME</dt>
-              <dd>7Y+</dd>
+              <dt class="caption-3">Building since</dt>
+              <dd class="title-1">2019</dd>
             </div>
           </dl>
         </div>
 
-        <div class="hero-terminal" aria-hidden="true">
-          <div class="terminal-bar">
-            <span class="terminal-lights"><i></i><i></i><i></i></span>
-            <span class="terminal-title">imran@kali: ~/portfolio</span>
-            <span class="terminal-badge">[ SECURE ]</span>
-          </div>
-          <div class="terminal-body">
-            <pre class="terminal-output" id="terminal-output"><span class="term-prompt">imran@kali:~$</span> whoami
-Imran Shaikh
-<span class="term-prompt">imran@kali:~$</span> cat role.txt
-Penetration Tester / Bug Hunter
-<span class="term-prompt">imran@kali:~$</span> ls focus/
-web  api  android  network  red-team  osint
-<span class="term-prompt">imran@kali:~$</span> sudo hire-me
-[ ACCESS GRANTED ]</pre>
-            <span class="terminal-cursor" aria-hidden="true"></span>
-          </div>
-          <div class="terminal-foot">
-            <span><span class="live-dot" aria-hidden="true"></span> CONNECTED</span>
-            <span>SSH / 0x407704</span>
-          </div>
+        <div class="hero-stage" aria-hidden="true">
+          <span class="stage-chip stage-chip-1 glass">
+            <span class="stage-chip-dot"></span>
+            Authorized scope
+          </span>
+          <span class="stage-chip stage-chip-2 glass">
+            <span class="stage-chip-dot"></span>
+            Evidence first
+          </span>
+          <span class="stage-chip stage-chip-3 glass">
+            <span class="stage-chip-dot"></span>
+            Fix included
+          </span>
         </div>
       </div>
+
       <div class="hero-foot" aria-hidden="true">
-        <span>SCROLL TO DECRYPT</span>
+        <span class="caption-4">Scroll to inspect</span>
         <span class="hero-foot-line"></span>
-        <span>EST. 2019</span>
+        <span class="caption-4">EST. 2019</span>
       </div>
     </section>
 
     <div class="ticker" aria-hidden="true">
       <div class="ticker-track">
-        <span>WEB</span><span>API</span><span>ANDROID</span><span>NETWORK</span><span>RED TEAM</span><span>OSINT</span><span>BUG BOUNTY</span><span>TOOLING</span>
-        <span>WEB</span><span>API</span><span>ANDROID</span><span>NETWORK</span><span>RED TEAM</span><span>OSINT</span><span>BUG BOUNTY</span><span>TOOLING</span>
+        <span>Web</span><span>API</span><span>Android</span><span>Network</span><span>Red team</span><span>OSINT</span><span>Bug bounty</span><span>Tooling</span>
+        <span>Web</span><span>API</span><span>Android</span><span>Network</span><span>Red team</span><span>OSINT</span><span>Bug bounty</span><span>Tooling</span>
       </div>
     </div>
 
     <section class="tagline-section" aria-labelledby="tagline">
-      <p class="section-label">00 / MANIFESTO</p>
-      <p class="tagline" id="tagline" data-reveal-words>I break systems with permission. Then I write the finding so it gets fixed.</p>
+      <p class="section-label caption-3">00 / Manifesto</p>
+      <p class="heading-3 tagline" id="tagline" data-reveal-words>
+        I break systems with permission. Then I write the finding so it gets fixed.
+      </p>
     </section>
 
     <section class="section work" id="work">
-      <header class="section-head" data-reveal>
-        <p class="section-label">01 / SELECTED WORK</p>
-        <h2>Operations, not side projects.</h2>
-        <p class="section-lede">Open source tools, research archives and automation built for real bug bounty workflows.</p>
+      <header class="section-head">
+        <p class="section-label caption-3 reveal">01 / Selected work</p>
+        <h2 class="heading-2 reveal">Operations, not side projects.</h2>
+        <p class="body-2 section-lede reveal">
+          Open source tools, research archives and automation built for real bug bounty
+          workflows. Every card links to the repository.
+        </p>
       </header>
 
       <div class="work-grid">
-        <article class="project project-featured" data-reveal data-repo="HostInjection">
+        <article class="project project-featured glass tilt reveal">
           <div class="project-body">
             <div class="project-top">
-              <span class="project-index">01</span>
-              <span class="project-kind">FLAGSHIP TOOL</span>
+              <span class="project-index caption-3">01</span>
+              <span class="project-kind caption-4">Flagship tool</span>
             </div>
-            <h3 class="project-title">HostInjection</h3>
-            <p class="project-copy">A fast, single file scanner for host header injection and web cache poisoning. Built for authorized pentests and bug bounty workflows.</p>
+            <h3 class="heading-5 project-title">HostInjection</h3>
+            <p class="body-3 project-copy">
+              A fast, single file scanner for host header injection and web cache
+              poisoning. Built for authorized pentests and bug bounty workflows.
+            </p>
             <div class="project-tags">
-              <span>Python</span><span>CLI</span><span>Bug bounty</span>
+              <span class="tag caption-4">Python</span>
+              <span class="tag caption-4">CLI</span>
+              <span class="tag caption-4">Bug bounty</span>
             </div>
             <div class="project-foot">
-              <span class="project-stars" data-stars="HostInjection"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> 2</span>
-              <a class="project-link" href="https://github.com/Imran407704/HostInjection" target="_blank" rel="noopener noreferrer">
+              <span class="project-stars caption-4"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> <span data-stars="HostInjection">2</span></span>
+              <a class="project-link title-3" href="https://github.com/Imran407704/HostInjection" target="_blank" rel="noopener noreferrer">
                 Open repository
                 <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
               </a>
@@ -213,105 +257,118 @@ web  api  android  network  red-team  osint
           </div>
           <div class="project-visual" aria-hidden="true">
             <span class="scan-line"></span>
-            <div class="visual-log">
+            <div class="visual-log caption-4">
               <p><span class="vis-key">GET</span> / HTTP/1.1</p>
               <p><span class="vis-key">Host:</span> target.com</p>
               <p class="is-hit"><span class="vis-key">X-Forwarded-Host:</span> evil.net</p>
               <p><span class="vis-key">Cache-Control:</span> max-age=60</p>
               <p class="vis-flag">&gt; 200 OK &middot; cache poisoned</p>
             </div>
-            <div class="visual-foot">
-              <span class="project-visual-label">HOST / CACHE</span>
-              <span class="project-visual-status">SCANNING</span>
+            <div class="visual-foot caption-4">
+              <span>Host / Cache</span>
+              <span class="visual-status"><span class="live-dot" aria-hidden="true"></span> Scanning</span>
             </div>
           </div>
         </article>
 
-        <article class="project" data-reveal data-repo="Learn365">
+        <article class="project glass tilt reveal">
           <div class="project-top">
-            <span class="project-index">02</span>
-            <span class="project-kind">RESEARCH ARCHIVE</span>
+            <span class="project-index caption-3">02</span>
+            <span class="project-kind caption-4">Research archive</span>
           </div>
-          <h3 class="project-title">Learn365</h3>
-          <p class="project-copy">A daily cybersecurity learning archive built to make consistent study easier to keep.</p>
-          <div class="project-tags"><span>Research</span><span>Community</span></div>
+          <h3 class="title-1 project-title">Learn365</h3>
+          <p class="body-6 project-copy">
+            A daily cybersecurity learning archive, kept public so the notes stay
+            useful to other people.
+          </p>
+          <div class="project-tags"><span class="tag caption-4">Research</span><span class="tag caption-4">Community</span></div>
           <div class="project-foot">
-            <span class="project-stars" data-stars="Learn365"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> 99</span>
-            <a class="project-link" href="https://github.com/Imran407704/Learn365" target="_blank" rel="noopener noreferrer" aria-label="Open Learn365 repository">
+            <span class="project-stars caption-4"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> <span data-stars="Learn365">99</span></span>
+            <a class="project-link" href="https://github.com/Imran407704/Learn365" target="_blank" rel="noopener noreferrer" aria-label="Open the Learn365 repository">
               <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
             </a>
           </div>
         </article>
 
-        <article class="project" data-reveal data-repo="passive-subd">
+        <article class="project glass tilt reveal">
           <div class="project-top">
-            <span class="project-index">03</span>
-            <span class="project-kind">RECON AUTOMATION</span>
+            <span class="project-index caption-3">03</span>
+            <span class="project-kind caption-4">Recon automation</span>
           </div>
-          <h3 class="project-title">passive-subd</h3>
-          <p class="project-copy">Passive subdomain enumeration, automated from a single Bash script.</p>
-          <div class="project-tags"><span>Bash</span><span>Recon</span></div>
+          <h3 class="title-1 project-title">passive-subd</h3>
+          <p class="body-6 project-copy">
+            Passive subdomain enumeration, automated from a single Bash script.
+          </p>
+          <div class="project-tags"><span class="tag caption-4">Bash</span><span class="tag caption-4">Recon</span></div>
           <div class="project-foot">
-            <span class="project-stars" data-stars="passive-subd"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> 7</span>
-            <a class="project-link" href="https://github.com/Imran407704/passive-subd" target="_blank" rel="noopener noreferrer" aria-label="Open passive-subd repository">
+            <span class="project-stars caption-4"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> <span data-stars="passive-subd">7</span></span>
+            <a class="project-link" href="https://github.com/Imran407704/passive-subd" target="_blank" rel="noopener noreferrer" aria-label="Open the passive-subd repository">
               <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
             </a>
           </div>
         </article>
 
-        <article class="project" data-reveal data-repo="multi-urls">
+        <article class="project glass tilt reveal">
           <div class="project-top">
-            <span class="project-index">04</span>
-            <span class="project-kind">URL HARVESTING</span>
+            <span class="project-index caption-3">04</span>
+            <span class="project-kind caption-4">URL harvesting</span>
           </div>
-          <h3 class="project-title">multi-urls</h3>
-          <p class="project-copy">Passive URL harvesting from gau, gauplus and waybackurls across a list of targets.</p>
-          <div class="project-tags"><span>Bash</span><span>Recon</span></div>
+          <h3 class="title-1 project-title">multi-urls</h3>
+          <p class="body-6 project-copy">
+            Passive URL harvesting from gau, gauplus and waybackurls across a list
+            of targets.
+          </p>
+          <div class="project-tags"><span class="tag caption-4">Bash</span><span class="tag caption-4">Recon</span></div>
           <div class="project-foot">
-            <span class="project-stars" data-stars="multi-urls"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> 8</span>
-            <a class="project-link" href="https://github.com/Imran407704/multi-urls" target="_blank" rel="noopener noreferrer" aria-label="Open multi-urls repository">
+            <span class="project-stars caption-4"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> <span data-stars="multi-urls">8</span></span>
+            <a class="project-link" href="https://github.com/Imran407704/multi-urls" target="_blank" rel="noopener noreferrer" aria-label="Open the multi-urls repository">
               <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
             </a>
           </div>
         </article>
 
-        <article class="project" data-reveal data-repo="archive">
+        <article class="project glass tilt reveal">
           <div class="project-top">
-            <span class="project-index">05</span>
-            <span class="project-kind">WORKFLOW</span>
+            <span class="project-index caption-3">05</span>
+            <span class="project-kind caption-4">Workflow</span>
           </div>
-          <h3 class="project-title">archive</h3>
-          <p class="project-copy">URL aggregation and archival automation for repetitive recon work.</p>
-          <div class="project-tags"><span>Bash</span><span>Automation</span></div>
+          <h3 class="title-1 project-title">archive</h3>
+          <p class="body-6 project-copy">
+            URL aggregation and archival automation for the repetitive part of recon.
+          </p>
+          <div class="project-tags"><span class="tag caption-4">Bash</span><span class="tag caption-4">Automation</span></div>
           <div class="project-foot">
-            <span class="project-stars" data-stars="archive"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> 6</span>
-            <a class="project-link" href="https://github.com/Imran407704/archive" target="_blank" rel="noopener noreferrer" aria-label="Open archive repository">
+            <span class="project-stars caption-4"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> <span data-stars="archive">6</span></span>
+            <a class="project-link" href="https://github.com/Imran407704/archive" target="_blank" rel="noopener noreferrer" aria-label="Open the archive repository">
               <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
             </a>
           </div>
         </article>
 
-        <article class="project" data-reveal data-repo="list-target">
+        <article class="project glass tilt reveal">
           <div class="project-top">
-            <span class="project-index">06</span>
-            <span class="project-kind">WORDLISTS</span>
+            <span class="project-index caption-3">06</span>
+            <span class="project-kind caption-4">Wordlists</span>
           </div>
-          <h3 class="project-title">list-target</h3>
-          <p class="project-copy">A target wordlist generator for bug bounty hunters who want a cleaner starting point.</p>
-          <div class="project-tags"><span>Bash</span><span>Bug bounty</span></div>
+          <h3 class="title-1 project-title">list-target</h3>
+          <p class="body-6 project-copy">
+            A target wordlist generator for bug bounty hunters who want a cleaner
+            starting point.
+          </p>
+          <div class="project-tags"><span class="tag caption-4">Bash</span><span class="tag caption-4">Bug bounty</span></div>
           <div class="project-foot">
-            <span class="project-stars" data-stars="list-target"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> 2</span>
-            <a class="project-link" href="https://github.com/Imran407704/list-target" target="_blank" rel="noopener noreferrer" aria-label="Open list-target repository">
+            <span class="project-stars caption-4"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> <span data-stars="list-target">2</span></span>
+            <a class="project-link" href="https://github.com/Imran407704/list-target" target="_blank" rel="noopener noreferrer" aria-label="Open the list-target repository">
               <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
             </a>
           </div>
         </article>
 
-        <a class="project project-cta" href="https://github.com/Imran407704?tab=repositories" target="_blank" rel="noopener noreferrer" data-reveal>
-          <span class="project-index">07 / INDEX</span>
-          <span class="cta-title">All repositories</span>
-          <span class="cta-copy">Tools, experiments and archives. The full index lives on GitHub.</span>
-          <span class="cta-link">
+        <a class="project project-cta glass tilt reveal" href="https://github.com/Imran407704?tab=repositories" target="_blank" rel="noopener noreferrer">
+          <span class="project-index caption-3">07 / Index</span>
+          <span class="heading-5 cta-title">All repositories</span>
+          <span class="body-6 cta-copy">Tools, experiments and archives. The full index lives on GitHub.</span>
+          <span class="cta-link title-3">
             github.com/Imran407704
             <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
           </span>
@@ -320,98 +377,125 @@ web  api  android  network  red-team  osint
     </section>
 
     <section class="section arsenal" id="arsenal">
-      <header class="section-head" data-reveal>
-        <p class="section-label">02 / ARSENAL</p>
-        <h2>The toolkit behind the work.</h2>
-        <p class="section-lede">A working set of offensive security tools, not a logo wall. Every item here has a job.</p>
+      <header class="section-head">
+        <p class="section-label caption-3 reveal">02 / Arsenal</p>
+        <h2 class="heading-2 reveal">The toolkit behind the work.</h2>
+        <p class="body-2 section-lede reveal">
+          A working set of offensive security tools, not a logo wall. Every item here
+          has a job on an engagement.
+        </p>
       </header>
 
       <div class="arsenal-grid">
-        <article class="arsenal-card" data-reveal>
-          <h3><span>01</span> WEB</h3>
-          <ul><li>Burp Suite</li><li>SQLmap</li><li>ffuf</li><li>OWASP ZAP</li><li>Nikto</li></ul>
+        <article class="arsenal-card glass reveal">
+          <h3 class="title-2"><span class="arsenal-num caption-3">01</span> Web</h3>
+          <ul class="body-6"><li>Burp Suite</li><li>SQLmap</li><li>ffuf</li><li>OWASP ZAP</li><li>Nikto</li></ul>
         </article>
-        <article class="arsenal-card" data-reveal>
-          <h3><span>02</span> RECON</h3>
-          <ul><li>subfinder</li><li>amass</li><li>gau</li><li>waybackurls</li><li>Shodan</li><li>Maltego</li><li>theHarvester</li></ul>
+        <article class="arsenal-card glass reveal">
+          <h3 class="title-2"><span class="arsenal-num caption-3">02</span> Recon</h3>
+          <ul class="body-6"><li>subfinder</li><li>amass</li><li>gau</li><li>waybackurls</li><li>Shodan</li><li>theHarvester</li></ul>
         </article>
-        <article class="arsenal-card" data-reveal>
-          <h3><span>03</span> NETWORK</h3>
-          <ul><li>Nmap</li><li>Netcat</li><li>Wireshark</li><li>Aircrack-ng</li></ul>
+        <article class="arsenal-card glass reveal">
+          <h3 class="title-2"><span class="arsenal-num caption-3">03</span> Network</h3>
+          <ul class="body-6"><li>Nmap</li><li>Netcat</li><li>Wireshark</li><li>Aircrack-ng</li></ul>
         </article>
-        <article class="arsenal-card" data-reveal>
-          <h3><span>04</span> EXPLOIT</h3>
-          <ul><li>Metasploit</li><li>searchsploit</li><li>msfvenom</li></ul>
+        <article class="arsenal-card glass reveal">
+          <h3 class="title-2"><span class="arsenal-num caption-3">04</span> Exploit</h3>
+          <ul class="body-6"><li>Metasploit</li><li>searchsploit</li><li>msfvenom</li></ul>
         </article>
-        <article class="arsenal-card" data-reveal>
-          <h3><span>05</span> SYSTEM</h3>
-          <ul><li>Kali Linux</li><li>Parrot OS</li><li>Ubuntu</li><li>Windows</li><li>PowerShell</li></ul>
+        <article class="arsenal-card glass reveal">
+          <h3 class="title-2"><span class="arsenal-num caption-3">05</span> System</h3>
+          <ul class="body-6"><li>Kali Linux</li><li>Parrot OS</li><li>Ubuntu</li><li>Windows</li><li>PowerShell</li></ul>
         </article>
-        <article class="arsenal-card" data-reveal>
-          <h3><span>06</span> BUILD</h3>
-          <ul><li>Python</li><li>Bash</li><li>JavaScript</li><li>Docker</li><li>AWS</li><li>Git</li></ul>
+        <article class="arsenal-card glass reveal">
+          <h3 class="title-2"><span class="arsenal-num caption-3">06</span> Build</h3>
+          <ul class="body-6"><li>Python</li><li>Bash</li><li>JavaScript</li><li>Docker</li><li>AWS</li><li>Git</li></ul>
         </article>
       </div>
 
-      <p class="notice" data-reveal>
+      <p class="notice glass reveal">
         <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
-        <span><strong>AUTHORIZED TARGETS ONLY.</strong> All testing is performed with explicit permission.</span>
+        <span class="body-6"><strong>Authorized targets only.</strong> Every test runs with explicit written permission and a defined scope.</span>
       </p>
     </section>
 
     <section class="section about" id="about">
       <div class="about-grid">
-        <div class="operator-card" data-reveal>
+        <div class="operator-card glass tilt reveal">
           <div class="operator-image">
-            <img src="assets/avatar.jpg" alt="Portrait of Imran Shaikh" width="460" height="460" loading="lazy">
+            <img src="assets/avatar.jpg" alt="Imran Shaikh standing on a concrete slab in a beige shirt" width="1000" height="1250" loading="lazy" decoding="async">
             <span class="operator-scan" aria-hidden="true"></span>
           </div>
           <div class="operator-meta">
-            <p class="operator-name">Imran Shaikh</p>
-            <p class="operator-role">PENETRATION TESTER / BUG HUNTER</p>
-            <dl>
-              <div><dt>NODE</dt><dd>127.0.0.1</dd></div>
-              <div><dt>SINCE</dt><dd>2019</dd></div>
-              <div><dt>STATUS</dt><dd><span class="live-dot" aria-hidden="true"></span> ONLINE</dd></div>
+            <p class="title-1 operator-name">Imran Shaikh</p>
+            <p class="caption-4 operator-role">Penetration tester / Bug hunter</p>
+            <dl class="operator-list">
+              <div><dt class="caption-5">Node</dt><dd class="body-6">127.0.0.1</dd></div>
+              <div><dt class="caption-5">Since</dt><dd class="body-6">2019</dd></div>
+              <div><dt class="caption-5">Status</dt><dd class="body-6"><span class="live-dot" aria-hidden="true"></span> Online</dd></div>
             </dl>
           </div>
         </div>
 
         <div class="about-copy">
-          <p class="section-label" data-reveal>03 / WHOAMI</p>
-          <h2 data-reveal>Curious by default. Careful by practice.</h2>
-          <div data-reveal>
-            <p>I am a penetration tester and bug hunter working across web, API, Android and network security. I build small tools for repetitive recon work, document what I learn, and share the process on YouTube.</p>
-            <p>My goal is simple: find the issue, prove it clearly, and write it so the fix is obvious.</p>
+          <p class="section-label caption-3 reveal">03 / Whoami</p>
+          <h2 class="heading-2 reveal">Curious by default.<br>Careful by practice.</h2>
+          <div class="about-text reveal">
+            <p class="body-3">
+              I work across web, API, Android and network security. I build small tools
+              for repetitive recon work, document what I learn, and share the process on
+              YouTube.
+            </p>
+            <p class="body-3">
+              My goal is simple: find the issue, prove it clearly, and write it so the
+              fix is obvious.
+            </p>
           </div>
 
-          <dl class="profile-table" data-reveal>
-            <div><dt>ROLE</dt><dd>Penetration tester / bug hunter</dd></div>
-            <div><dt>FOCUS</dt><dd>Web / API / Android / Network / Red team / OSINT</dd></div>
-            <div><dt>STACK</dt><dd>Python / Bash / JavaScript / Docker / AWS</dd></div>
-            <div><dt>BASED AT</dt><dd>127.0.0.1</dd></div>
+          <dl class="profile-table reveal">
+            <div><dt class="caption-4">Role</dt><dd class="body-6">Penetration tester / Bug hunter</dd></div>
+            <div><dt class="caption-4">Focus</dt><dd class="body-6">Web / API / Android / Network / Red team / OSINT</dd></div>
+            <div><dt class="caption-4">Stack</dt><dd class="body-6">Python / Bash / JavaScript / Docker / AWS</dd></div>
+            <div><dt class="caption-4">Based at</dt><dd class="body-6">127.0.0.1</dd></div>
           </dl>
+        </div>
 
-          <ul class="principles" data-reveal>
-            <li><span>01</span> Authorization first.</li>
-            <li><span>02</span> Evidence over noise.</li>
-            <li><span>03</span> Write it so it can be fixed.</li>
-          </ul>
+        <div class="terminal glass reveal" aria-label="Terminal session summary">
+          <div class="terminal-bar">
+            <span class="terminal-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="caption-4 terminal-title">imran@kali: ~/portfolio</span>
+            <span class="caption-4 terminal-badge">[ SECURE ]</span>
+          </div>
+          <pre class="terminal-body body-6" id="terminal-body" aria-label="Terminal session summary"><span class="term-prompt">imran@kali:~$</span> whoami
+Imran Shaikh
+<span class="term-prompt">imran@kali:~$</span> cat focus.txt
+web  api  android  network  red team  osint
+<span class="term-prompt">imran@kali:~$</span> ls ~/tools
+HostInjection  passive-subd  multi-urls  archive  list-target
+<span class="term-prompt">imran@kali:~$</span> echo $ETHICS
+authorized targets only</pre>
+          <span class="terminal-cursor" aria-hidden="true"></span>
         </div>
       </div>
+
+      <ul class="principles reveal">
+        <li class="body-5"><span class="caption-3">01</span> Authorization first.</li>
+        <li class="body-5"><span class="caption-3">02</span> Evidence over noise.</li>
+        <li class="body-5"><span class="caption-3">03</span> Write it so it can be fixed.</li>
+      </ul>
     </section>
 
     <section class="section broadcast" id="broadcast">
-      <div class="broadcast-card" data-reveal>
+      <div class="broadcast-card glass reveal">
         <div class="broadcast-icon" aria-hidden="true">
           <svg class="icon"><use href="#i-play"/></svg>
         </div>
         <div class="broadcast-copy">
-          <p class="section-label">04 / BROADCAST</p>
-          <h2>CyberSecOps on YouTube</h2>
-          <p>Labs, tooling and the hunt, recorded. The channel is where the process leaves the terminal.</p>
+          <p class="section-label caption-3">04 / Broadcast</p>
+          <h2 class="heading-4">CyberSecOps on YouTube</h2>
+          <p class="body-2">Labs, tooling and the hunt, recorded. The channel is where the process leaves the terminal.</p>
         </div>
-        <a class="btn btn-ghost" href="https://www.youtube.com/@cybersecops7146" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-glass button-md" href="https://www.youtube.com/@cybersecops7146" target="_blank" rel="noopener noreferrer">
           Open channel
           <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
         </a>
@@ -419,28 +503,31 @@ web  api  android  network  red-team  osint
     </section>
 
     <section class="section contact" id="contact">
-      <p class="section-label" data-reveal>05 / CONTACT</p>
-      <h2 data-reveal>Let's test something.</h2>
-      <p class="contact-lede" data-reveal>If you have an authorized scope and a surface worth checking, reach out. The fastest reply is on LinkedIn or X.</p>
-      <div class="contact-links" data-reveal>
-        <a href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer">
+      <p class="section-label caption-3 reveal">05 / Contact</p>
+      <h2 class="heading-1 contact-title reveal">Have a scope<br>worth testing?</h2>
+      <p class="body-2 contact-lede reveal">
+        If you have an authorized scope and a surface worth checking, reach out.
+        The fastest reply is on LinkedIn or X.
+      </p>
+      <div class="contact-links reveal">
+        <a class="glass" href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer">
           <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
-          LinkedIn
+          <span class="title-3">LinkedIn</span>
           <svg class="icon icon-end" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
         </a>
-        <a href="https://x.com/imran407704" target="_blank" rel="noopener noreferrer">
-          <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
-          X
-          <svg class="icon icon-end" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
-        </a>
-        <a href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer">
+        <a class="glass" href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer">
           <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
-          GitHub
+          <span class="title-3">GitHub</span>
           <svg class="icon icon-end" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
         </a>
-        <a href="https://www.youtube.com/@cybersecops7146" target="_blank" rel="noopener noreferrer">
+        <a class="glass" href="https://x.com/imran407704" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+          <span class="title-3">X</span>
+          <svg class="icon icon-end" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+        </a>
+        <a class="glass" href="https://www.youtube.com/@cybersecops7146" target="_blank" rel="noopener noreferrer">
           <svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg>
-          YouTube
+          <span class="title-3">YouTube</span>
           <svg class="icon icon-end" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
         </a>
       </div>
@@ -449,46 +536,51 @@ web  api  android  network  red-team  osint
 
   <footer class="site-footer">
     <div class="footer-top">
-      <p class="footer-brand"><span class="brand-mark">0x</span>407704</p>
-      <a class="footer-top-link" href="#top">
+      <p class="title-2 footer-brand"><span class="brand-mark">0x</span>407704</p>
+      <a class="footer-top-link body-6" href="#top">
         Back to top
         <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
       </a>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year">2026</span> Imran Shaikh. Built with static HTML, CSS and JavaScript. Hosted on GitHub Pages.</p>
+    <div class="footer-bottom caption-5">
+      <p>&copy; <span id="year">2026</span> Imran Shaikh. Static HTML, CSS and JavaScript. Hosted on GitHub Pages.</p>
       <p><a href="privacy.html">Privacy</a><span class="footer-sep">/</span><a href="terms.html">Terms</a><span class="footer-sep">/</span><span>No cookies. No trackers.</span></p>
     </div>
   </footer>
 
-  <dialog class="command-menu" id="command-menu" aria-labelledby="cmd-title">
+  <dialog class="command-menu glass" id="command-menu" aria-labelledby="cmd-title">
     <div class="cmd-head">
       <span class="cmd-prompt" aria-hidden="true">&gt;</span>
       <label class="sr-only" for="cmd-input" id="cmd-title">Search the portfolio</label>
-      <input id="cmd-input" type="text" placeholder="Type a command or search..." autocomplete="off" spellcheck="false">
+      <input id="cmd-input" class="body-2" type="text" placeholder="Type a command or search" autocomplete="off" spellcheck="false">
       <button class="cmd-close" type="button" data-cmd-close aria-label="Close menu">
         <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
       </button>
     </div>
     <ul class="cmd-list" id="cmd-list">
-      <li><a href="#work" data-keywords="work projects tools payloads hostinjection learn365"><span class="cmd-index">01</span>Selected work<span class="cmd-hint">projects</span></a></li>
-      <li><a href="#arsenal" data-keywords="arsenal skills tools security stack"><span class="cmd-index">02</span>Arsenal<span class="cmd-hint">toolkit</span></a></li>
-      <li><a href="#about" data-keywords="about whoami bio profile"><span class="cmd-index">03</span>About<span class="cmd-hint">whoami</span></a></li>
-      <li><a href="#broadcast" data-keywords="youtube video channel cybersecops broadcast"><span class="cmd-index">04</span>Broadcast<span class="cmd-hint">youtube</span></a></li>
-      <li><a href="#contact" data-keywords="contact email linkedin x github youtube hire"><span class="cmd-index">05</span>Contact<span class="cmd-hint">uplinks</span></a></li>
-      <li><a href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer" data-keywords="github code repositories source"><span class="cmd-index">↗</span>GitHub<span class="cmd-hint">external</span></a></li>
-      <li><a href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer" data-keywords="linkedin professional work"><span class="cmd-index">↗</span>LinkedIn<span class="cmd-hint">external</span></a></li>
-      <li><a href="https://x.com/imran407704" target="_blank" rel="noopener noreferrer" data-keywords="x twitter social"><span class="cmd-index">↗</span>X<span class="cmd-hint">external</span></a></li>
-      <li><a href="https://www.youtube.com/@cybersecops7146" target="_blank" rel="noopener noreferrer" data-keywords="youtube video channel"><span class="cmd-index">↗</span>YouTube<span class="cmd-hint">external</span></a></li>
+      <li><a href="#work" data-keywords="work projects tools payloads hostinjection learn365"><span class="cmd-index caption-4">01</span><span class="body-5">Selected work</span><span class="cmd-hint caption-5">projects</span></a></li>
+      <li><a href="#arsenal" data-keywords="arsenal skills tools security stack"><span class="cmd-index caption-4">02</span><span class="body-5">Arsenal</span><span class="cmd-hint caption-5">toolkit</span></a></li>
+      <li><a href="#about" data-keywords="about whoami bio profile terminal"><span class="cmd-index caption-4">03</span><span class="body-5">About</span><span class="cmd-hint caption-5">whoami</span></a></li>
+      <li><a href="#broadcast" data-keywords="youtube video channel cybersecops broadcast"><span class="cmd-index caption-4">04</span><span class="body-5">Broadcast</span><span class="cmd-hint caption-5">youtube</span></a></li>
+      <li><a href="#contact" data-keywords="contact email linkedin x github youtube hire"><span class="cmd-index caption-4">05</span><span class="body-5">Contact</span><span class="cmd-hint caption-5">uplinks</span></a></li>
+      <li><a href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer" data-keywords="github code repositories source"><span class="cmd-index caption-4">↗</span><span class="body-5">GitHub</span><span class="cmd-hint caption-5">external</span></a></li>
+      <li><a href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer" data-keywords="linkedin professional work"><span class="cmd-index caption-4">↗</span><span class="body-5">LinkedIn</span><span class="cmd-hint caption-5">external</span></a></li>
+      <li><a href="https://x.com/imran407704" target="_blank" rel="noopener noreferrer" data-keywords="x twitter social"><span class="cmd-index caption-4">↗</span><span class="body-5">X</span><span class="cmd-hint caption-5">external</span></a></li>
+      <li><a href="https://www.youtube.com/@cybersecops7146" target="_blank" rel="noopener noreferrer" data-keywords="youtube video channel"><span class="cmd-index caption-4">↗</span><span class="body-5">YouTube</span><span class="cmd-hint caption-5">external</span></a></li>
     </ul>
-    <p class="cmd-empty" id="cmd-empty" hidden>No signal found. Try "work", "about" or "contact".</p>
-    <div class="cmd-foot" aria-hidden="true">
+    <p class="cmd-empty body-6" id="cmd-empty" hidden>No signal found. Try "work", "about" or "contact".</p>
+    <div class="cmd-foot caption-5" aria-hidden="true">
       <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
       <span><kbd>Enter</kbd> select</span>
       <span><kbd>Esc</kbd> close</span>
     </div>
   </dialog>
 
-  <script src="js/main.js" defer></script>
+  <noscript>
+    <p class="noscript body-6">JavaScript is off. All content and links still work. The 3D scene and scroll motion need JavaScript.</p>
+  </noscript>
+
+  <script type="module" src="js/three-scene.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

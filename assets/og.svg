@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="0.82" cy="0.18" r="0.6">
+      <stop offset="0" stop-color="#b6ff3c" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#b6ff3c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cool" cx="0.1" cy="0.95" r="0.6">
+      <stop offset="0" stop-color="#5ed6ff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#5ed6ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#9b9b9b"/>
+    </linearGradient>
+    <linearGradient id="facet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#b6ff3c" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#5ed6ff" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#000000"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#cool)"/>
+
+  <rect x="80" y="60" width="6" height="6" rx="2" fill="#b6ff3c"/>
+  <text x="98" y="69" font-family="Consolas, monospace" font-size="18" letter-spacing="1" fill="#b6ff3c">STATUS: ONLINE</text>
+  <text x="1120" y="69" text-anchor="end" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#7a7a7a">IMRAN407704.GITHUB.IO</text>
+  <line x1="80" y1="96" x2="1120" y2="96" stroke="url(#fade)"/>
+
+  <text x="80" y="250" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="600" letter-spacing="-2" fill="#ffffff">Penetration testing</text>
+  <text x="80" y="336" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="600" letter-spacing="-2" fill="url(#text)">that ends in a fix.</text>
+  <text x="82" y="410" font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#9b9b9b">Web, API, Android and network security.</text>
+
+  <g transform="translate(950 330)">
+    <circle r="196" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+    <ellipse rx="196" ry="64" fill="none" stroke="#b6ff3c" stroke-opacity="0.28" transform="rotate(-18)"/>
+    <ellipse rx="160" ry="52" fill="none" stroke="#ffffff" stroke-opacity="0.12" transform="rotate(24)"/>
+    <polygon points="0,-138 120,-42 74,120 -74,120 -120,-42" fill="#b6ff3c" fill-opacity="0.05" stroke="url(#facet)" stroke-width="2"/>
+    <polygon points="0,-138 74,120 -120,-42" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1"/>
+    <polygon points="0,-138 -74,120 120,-42" fill="none" stroke="#5ed6ff" stroke-opacity="0.3" stroke-width="1"/>
+    <polygon points="0,-46 44,26 -44,26" fill="none" stroke="#b6ff3c" stroke-opacity="0.9" stroke-width="2"/>
+    <circle r="5" fill="#b6ff3c"/>
+  </g>
+
+  <line x1="80" y1="510" x2="1120" y2="510" stroke="url(#fade)"/>
+  <text x="80" y="560" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="600" fill="#f4f4f2">Imran Shaikh</text>
+  <text x="80" y="592" font-family="Consolas, monospace" font-size="15" letter-spacing="3" fill="#7a7a7a">PENETRATION TESTER / BUG HUNTER</text>
+  <rect x="924" y="540" width="196" height="48" rx="24" fill="#b6ff3c"/>
+  <text x="1022" y="572" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" fill="#0a0a0a">Open portfolio</text>
+</svg>
