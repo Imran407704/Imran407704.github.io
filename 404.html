@@ -3,40 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>404 | Signal lost</title>
+  <title>404 | Off the web</title>
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#08080A">
+  <meta name="theme-color" content="#000000">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <div class="hud-grid" aria-hidden="true"></div>
-  <div class="hud-vignette" aria-hidden="true"></div>
-
-  <header class="site-header is-scrolled">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Imran Shaikh, back to portfolio">
+      <img src="/assets/favicon.svg" alt="" width="30" height="30">
+      <span class="brand-name">Imran Shaikh</span>
+    </a>
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="/" aria-label="Imran Shaikh, back to portfolio">
-        <span class="brand-arc" aria-hidden="true"></span>
-        <span class="brand-name">Imran Shaikh</span>
-        <span class="brand-tag">STARK OS</span>
-      </a>
+      <a href="/#about">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#contact">Contact</a>
     </nav>
+    <a class="btn btn-pill" href="/"><span>Back to portfolio</span></a>
   </header>
 
   <main class="legal error-page">
-    <p class="section-label mono-label">Error 404</p>
+    <p class="legal-label">Error 404</p>
     <p class="error-code" aria-hidden="true">404</p>
-    <h1>Signal lost.</h1>
-    <p class="error-copy">That route does not exist. The scope changed, or the link is old. The reactor is still online, so head back to known ground.</p>
+    <h1>Off the web.</h1>
+    <p class="error-copy">That route does not exist. The scope changed, or the link is old. Your spidey-sense was right — head back to known ground.</p>
     <div class="error-actions">
-      <a class="btn btn-primary" href="/">
-        Back to the portfolio
-        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a class="btn btn-ghost" href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn btn-pill" href="/"><span>Back to the portfolio</span></a>
+      <a class="btn btn-line" href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a>
     </div>
   </main>
 </body>

@@ -1,80 +1,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <radialGradient id="crimson" cx="0.84" cy="0.08" r="0.62">
-      <stop offset="0" stop-color="#e62429" stop-opacity="0.34"/>
-      <stop offset="0.55" stop-color="#8d0b12" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#8d0b12" stop-opacity="0"/>
+    <radialGradient id="red" cx="0.86" cy="0.06" r="0.6">
+      <stop offset="0" stop-color="#e02a30" stop-opacity="0.4"/>
+      <stop offset="0.55" stop-color="#8f0105" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#8f0105" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="cool" cx="0.08" cy="0.94" r="0.55">
-      <stop offset="0" stop-color="#6fe3f5" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#6fe3f5" stop-opacity="0"/>
+    <radialGradient id="blue" cx="0.06" cy="0.96" r="0.55">
+      <stop offset="0" stop-color="#1d3f9e" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#1d3f9e" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#ffffff"/>
       <stop offset="1" stop-color="#b6b4b0"/>
     </linearGradient>
-    <linearGradient id="goldline" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#f2c14e" stop-opacity="0.85"/>
-      <stop offset="0.45" stop-color="#f2c14e" stop-opacity="0.18"/>
-      <stop offset="1" stop-color="#f2c14e" stop-opacity="0"/>
+    <linearGradient id="redline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e02a30" stop-opacity="0.85"/>
+      <stop offset="0.45" stop-color="#e02a30" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#e02a30" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0.02"/>
     </linearGradient>
-    <radialGradient id="core" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="0.3" stop-color="#e8fdff"/>
-      <stop offset="0.55" stop-color="#8fe8ff"/>
-      <stop offset="0.78" stop-color="#3fb9d8" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#1f8ca8" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-      <path d="M60 0H0V60" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    <pattern id="web" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M0 36 H72 M36 0 V72 M0 0 L72 72 M72 0 L0 72" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1" fill="none"/>
+      <circle cx="36" cy="36" r="17" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+      <circle cx="36" cy="36" r="34" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
     </pattern>
   </defs>
 
   <rect width="1200" height="630" fill="#08080a"/>
-  <rect width="1200" height="630" fill="url(#grid)"/>
-  <rect width="1200" height="630" fill="url(#crimson)"/>
-  <rect width="1200" height="630" fill="url(#cool)"/>
+  <rect width="1200" height="630" fill="url(#web)"/>
+  <rect width="1200" height="630" fill="url(#red)"/>
+  <rect width="1200" height="630" fill="url(#blue)"/>
 
   <g font-family="Consolas, monospace" font-size="15" letter-spacing="2.4" fill="#9b9ba5">
-    <circle cx="84" cy="64" r="4" fill="#6fe3f5"/>
-    <text x="98" y="69">ARC REACTOR ONLINE</text>
+    <circle cx="84" cy="64" r="4" fill="#e02a30"/>
+    <text x="98" y="69">SPIDEY-SENSE ONLINE</text>
     <text x="1116" y="69" text-anchor="end" fill="#6d6d77">IMRAN407704.GITHUB.IO</text>
   </g>
   <line x1="80" y1="96" x2="1120" y2="96" stroke="url(#fade)"/>
 
   <g font-family="Segoe UI, Arial, sans-serif" font-weight="300" fill="url(#ink)">
-    <text x="80" y="236" font-size="66" letter-spacing="-3.2">Offensive security,</text>
-    <text x="80" y="312" font-size="66" letter-spacing="-3.2">precision engineered.</text>
+    <text x="80" y="236" font-size="66" letter-spacing="-3.2">Your friendly</text>
+    <text x="80" y="312" font-size="66" letter-spacing="-3.2">neighbourhood pentester.</text>
   </g>
 
   <text x="82" y="368" font-family="Segoe UI, Arial, sans-serif" font-size="23" fill="#9b9ba5">
     Penetration tester and red teamer. Web, API, Android and iOS.
   </text>
 
-  <g transform="translate(938 322)">
-    <circle r="190" fill="#6fe3f5" opacity="0.07"/>
-    <circle r="150" fill="none" stroke="#ffffff" stroke-opacity="0.1"/>
-    <circle r="122" fill="none" stroke="#f2c14e" stroke-opacity="0.45" stroke-width="2"/>
-    <circle r="104" fill="none" stroke="#6fe3f5" stroke-opacity="0.3" stroke-dasharray="2 12"/>
-    <polygon points="0,-86 74,43 -74,43" fill="none" stroke="#f2c14e" stroke-opacity="0.7" stroke-width="2"/>
-    <circle r="58" fill="url(#core)"/>
-    <circle r="26" fill="#f4feff" opacity="0.9"/>
-    <circle r="9" fill="#ffffff"/>
-    <g stroke="#f2c14e" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round">
+  <!-- spider emblem medallion -->
+  <g transform="translate(948 310)">
+    <circle r="196" fill="#1d3f9e" opacity="0.1"/>
+    <circle r="158" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+    <circle r="130" fill="none" stroke="#e02a30" stroke-opacity="0.5" stroke-width="2"/>
+    <circle r="112" fill="none" stroke="#4a7bff" stroke-opacity="0.3" stroke-dasharray="2 12"/>
+    <g transform="scale(1.9)" fill="#e02a30" stroke="#e02a30" stroke-width="2.6" stroke-linecap="round">
+      <path fill="none" d="M-5 -8 C -14 -14 -20 -18 -25 -25"/>
+      <path fill="none" d="M-7 -4 C -17 -7 -23 -9 -29 -12"/>
+      <path fill="none" d="M-7 1 C -17 2 -23 4 -29 8"/>
+      <path fill="none" d="M-5 5 C -13 10 -18 14 -23 20"/>
+      <path fill="none" d="M5 -8 C 14 -14 20 -18 25 -25"/>
+      <path fill="none" d="M7 -4 C 17 -7 23 -9 29 -12"/>
+      <path fill="none" d="M7 1 C 17 2 23 4 29 8"/>
+      <path fill="none" d="M5 5 C 13 10 18 14 23 20"/>
+      <ellipse cx="0" cy="4" rx="9" ry="12"/>
+      <circle cx="0" cy="-10" r="6.5"/>
+    </g>
+    <g stroke="#e02a30" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round">
       <path d="M0 -168v-20"/><path d="M0 168v20"/><path d="M-168 0h-20"/><path d="M168 0h20"/>
     </g>
   </g>
 
-  <line x1="80" y1="492" x2="1120" y2="492" stroke="url(#goldline)"/>
+  <line x1="80" y1="492" x2="1120" y2="492" stroke="url(#redline)"/>
 
   <text x="80" y="546" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="600" fill="#f6f5f2">Imran Shaikh</text>
   <text x="80" y="582" font-family="Consolas, monospace" font-size="13" letter-spacing="3" fill="#6d6d77">SENIOR ASSOCIATE — CYBER SECURITY / ANB SOLUTIONS</text>
 
   <g transform="translate(1120 556)">
-    <text x="0" y="0" text-anchor="end" font-family="Consolas, monospace" font-size="13" letter-spacing="2.6" fill="#f2c14e">MARK LXXXV</text>
+    <text x="0" y="0" text-anchor="end" font-family="Consolas, monospace" font-size="13" letter-spacing="2.6" fill="#e02a30">MASK ON</text>
   </g>
 </svg>

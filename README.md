@@ -1,26 +1,34 @@
 # Imran Shaikh — portfolio
 
-A static, Ironman-themed portfolio for Imran Shaikh, penetration tester and red teamer.
-No build step, no framework, no bundler: every file is served as-is by GitHub Pages.
+A static, Spider-Man-themed portfolio for Imran Shaikh, penetration tester and red
+teamer. No build step, no framework, no bundler: every file is served as-is by
+GitHub Pages.
 
-The visual system is graphite and crimson with gold plating and an arc-reactor cyan
-accent, built on a Vercel-Minimal structure: hairline borders, pill controls at 40px,
-400-weight display type with negative tracking, and generous whitespace.
+The layout mirrors a superhero-designer folio: preloader with rotating quotes,
+floating pill header, giant script-and-display hero, client marquee, tilted
+discipline ribbons, case-study cards, rotated gallery rows, a pinned "My story"
+timeline, tooling cards, services rows, a tools ring, "I'm Both", credentials
+cards, a red stats CTA and a giant footer wordmark. The palette is spidey red
+`#C90207` and spidey blue `#002979` on a black canvas, set in Outfit with Caveat
+for the script accents and JetBrains Mono for labels.
 
 ## What is inside
 
 ```
 portfolio/
-├─ index.html          Hero, mission, profile, experience, arsenal, projects, credentials, contact, JARVIS
+├─ index.html          Preloader, hero + mask toggle, marquees, projects, pinned
+│                      timeline, services, tools, credentials, CTA, KAREN panel
 ├─ privacy.html        Privacy page
 ├─ terms.html          Terms page
 ├─ 404.html            Branded not-found page (GitHub Pages serves this automatically)
-├─ css/style.css       Design tokens, HUD layer, layout, components, responsive, reduced motion
-├─ js/main.js          Nav, reveals, counters, card deploy, live GitHub stats, JARVIS/FRIDAY assistant
+├─ css/style.css       Design tokens, all sections, responsive, reduced motion, print
+├─ js/main.js          Preloader, cursor, header, menu, split text, scrub text,
+│                      marquee fills, counters, pinned timeline, mask toggle,
+│                      GitHub stars, KAREN/JARVIS assistant, Three.js hero scene
 └─ assets/
    ├─ avatar.jpg       Profile photo (base state of the hero portrait)
-   ├─ ironman.svg      Suit revealed on hover / MARK LXXXV toggle
-   ├─ favicon.svg      Arc reactor favicon
+   ├─ spiderman.svg    Masked suit art revealed on hover / MASK ON toggle
+   ├─ favicon.svg      Spider emblem favicon
    ├─ apple-touch-icon.png
    ├─ og.svg           Source for the social preview image
    └─ og.png           Rendered 1200×630 social preview
@@ -28,24 +36,31 @@ portfolio/
 
 ## Theme and interactions
 
-- **Portrait deploy**: hovering the hero portrait (or focusing the MARK LXXXV button)
-  swaps the photo for the suit. The toggle sets `aria-pressed` for keyboard and touch
-  users, and the readout switches from `HUMAN / ONLINE` to `MARK LXXXV / ONLINE`.
-- **JARVIS**: a scripted local assistant. `Ctrl/Cmd + K` opens it, `Esc` closes it,
-  the persona button switches between JARVIS and FRIDAY. Answers come from a keyword
+- **Mask on / off**: hovering the hero portrait (or pressing the `MASK ON` button)
+  swaps the photo for the spidey mask art. The toggle sets `aria-pressed` for
+  keyboard and touch users, and the tag flips between `MASK OFF` and `MASK ON`.
+- **KAREN**: a scripted local assistant. `Ctrl/Cmd + K` opens it, `Esc` closes it,
+  and the persona button switches it to JARVIS. Answers come from a keyword
   knowledge base in `js/main.js`; nothing is sent to a server.
-- **Live telemetry**: repository, star and follower counts come from the public GitHub
-  API and fall back to the static numbers in the HTML if the request fails.
-- **Motion**: CSS transitions plus `IntersectionObserver`. The tagline lights up word
-  by word as it enters the viewport. `prefers-reduced-motion` disables all of it.
+- **Pinned timeline**: the "Let's go back in time" section pins for a few viewport
+  heights and scrubs year, employer, progress bar and entries as you scroll.
+- **Marquees**: the client bar, ribbons, gallery rows and tools ring all loop via a
+  shared `marquee` keyframe; JS duplicates each track once for a seamless wrap.
+- **Hero 3D**: a Three.js ring scene (red and blue, spider palette) sits behind the
+  portrait. It loads from esm.sh with a jsDelivr failover; if both fail, the canvas
+  is removed and the CSS background carries the hero.
+- **Motion**: reveals, counters and the scrub-text effect run on
+  `IntersectionObserver` and `requestAnimationFrame`. `prefers-reduced-motion`
+  disables all of it, including the preloader and the 3D scene.
 
 ## Stack
 
 | Layer | Choice | Why |
 |---|---|---|
-| Type | Geist + Geist Mono | Loaded from Google Fonts |
-| Motion | CSS + `IntersectionObserver` + `requestAnimationFrame` | Counters and reveals, no animation dependency |
-| Data | GitHub REST API | Repo, star and follower counts, no token, no cache storage |
+| Type | Outfit + Caveat + JetBrains Mono | Loaded from Google Fonts |
+| Motion | CSS + `IntersectionObserver` + `requestAnimationFrame` | Counters, reveals and the pinned timeline, no animation dependency |
+| 3D | Three.js 0.169 via esm.sh, jsDelivr failover | Hero rings only; the site does not depend on it |
+| Data | GitHub REST API | Star counts on project cards, no token, no cache storage |
 | Everything else | Vanilla HTML, CSS, JS | Zero dependencies, zero build |
 
 ## Local preview
@@ -73,7 +88,7 @@ git clone https://github.com/Imran407704/Imran407704.github.io.git
 Copy-Item -Path portfolio\* -Destination Imran407704.github.io\ -Recurse -Force
 cd Imran407704.github.io
 git add .
-git commit -m "Rebuild portfolio: STARK OS Ironman theme"
+git commit -m "Rebuild portfolio: Spider-Man theme, Gowtham-style sections"
 git push origin main
 ```
 
@@ -90,24 +105,29 @@ Notes:
 
 - **Projects**: each card in `#projects`. `data-stars` is the fallback; live numbers come
   from the API.
-- **Arsenal**: the six panels inside `#arsenal`.
-- **Copy**: hero headline, mission tagline and profile text are plain HTML.
+- **Timeline**: the `.xt` entries in `#experience`; `data-year`, `data-date` and
+  `data-co` feed the pinned side panel.
+- **Copy**: hero, intro and about text are plain HTML.
 - **Assistant**: the `knowledge` array in `js/main.js`. Each entry has `keys` to match and
   an HTML `answer`. Add an entry, no other wiring needed.
-- **Suit image**: replace `assets/ironman.svg`, or drop in a photo at
-  `assets/ironman.jpg` and change the `portrait-swap` `src` in `index.html` plus its
-  `width`/`height` attributes.
-- **Social preview**: edit `assets/og.svg`, then re-render `assets/og.png` at 1200×630.
+- **Suit image**: replace `assets/spiderman.svg` (viewBox 1000×1250), or swap the
+  `hp-suit` `src` in `index.html` and keep its `width`/`height` attributes.
+- **Social preview**: edit `assets/og.svg`, then re-render `assets/og.png` at 1200×630
+  (for example with `@resvg/resvg-js`).
 
 ## Accessibility and performance
 
-- Skip link, visible focus rings, labelled icon-only controls, 40px control height.
-- JARVIS is a non-modal dialog: focus moves to the input on open, returns to the trigger
+- Skip link, visible focus rings, labelled icon-only controls.
+- KAREN is a non-modal dialog: focus moves to the input on open, returns to the trigger
   on close, and `Esc` always works.
 - Hover-only information is duplicated by a real button, so keyboard and touch users can
-  deploy the suit.
-- `prefers-reduced-motion` removes reveals, typing effects, marquees and scan lines.
-- No cookies, no analytics, no trackers, no local or session storage.
+  toggle the mask.
+- All content renders without JavaScript: reveal states are gated behind an `html.js-on`
+  class that only JS adds, and the `<noscript>` notice explains what is missing.
+- `prefers-reduced-motion` removes the preloader, the 3D scene, marquees, the pinned
+  timeline scrub and every reveal.
+- No cookies, no analytics, no trackers; one `sessionStorage` flag stops the intro
+  replaying on every navigation.
 
 ## Security note
 

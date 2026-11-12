@@ -1,10 +1,32 @@
 <!doctype html>
-<html lang="en" data-theme="stark">
+<html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imran Shaikh — Penetration Tester & Red Teamer</title>
+  <meta name="description" content="Imran Shaikh, penetration tester and red teamer at ANB Solutions, a CERT-In empanelled firm. 3.5+ years across web, API, Android and iOS security.">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://imran407704.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Imran Shaikh">
+  <meta property="og:title" content="Imran Shaikh — Penetration Tester & Red Teamer">
+  <meta property="og:description" content="Your friendly neighbourhood pentester. 3.5+ years of offensive security across web, API, Android and iOS.">
+  <meta property="og:url" content="https://imran407704.github.io/">
+  <meta property="og:image" content="https://imran407704.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Imran Shaikh — Penetration Tester & Red Teamer">
+  <meta name="twitter:description" content="Your friendly neighbourhood pentester. 3.5+ years of offensive security across web, API, Android and iOS.">
+  <meta name="twitter:image" content="https://imran407704.github.io/assets/og.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Imran Shaikh","alternateName":"imran407704","url":"https://imran407704.github.io/","jobTitle":"Penetration Tester & Red Teamer","worksFor":{"@type":"Organization","name":"ANB Solutions"},"sameAs":["https://www.linkedin.com/in/imran407704/","https://github.com/Imran407704","https://imran407704.medium.com/","https://x.com/imran407704"]}
+  </script>
   <script>
     (function () {
       var d = document.documentElement;
+      d.classList.add('js-on');
       try {
         var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
         var type = nav ? nav.type : 'navigate';
@@ -15,810 +37,519 @@
           d.classList.add('pl-on');
           try { sessionStorage.setItem('plSeen', '1'); } catch (e) {}
           if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+          if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+          window.scrollTo(0, 0);
         }
       } catch (e) {}
-      window.setTimeout(function () { d.classList.add('pl-done'); }, 4200);
     })();
   </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Imran Shaikh | Penetration tester and red teamer</title>
-  <meta name="description" content="Imran Shaikh is a penetration tester at ANB Solutions, a CERT-In empanelled firm. Web, Android, iOS and API security, red team operations and CERT-In compliant VAPT for BFSI and telecom clients.">
-  <meta name="author" content="Imran Shaikh">
-  <meta name="theme-color" content="#08080A">
-  <link rel="canonical" href="https://imran407704.github.io/">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://imran407704.github.io/">
-  <meta property="og:title" content="Imran Shaikh | Penetration tester and red teamer">
-  <meta property="og:description" content="3.5+ years of offensive security. Web, Android, iOS and API VAPT, red team operations, CERT-In compliant reporting.">
-  <meta property="og:image" content="https://imran407704.github.io/assets/og.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@imran407704">
-  <meta name="twitter:title" content="Imran Shaikh | Penetration tester and red teamer">
-  <meta name="twitter:description" content="3.5+ years of offensive security. Web, Android, iOS and API VAPT, red team operations, CERT-In compliant reporting.">
-  <meta name="twitter:image" content="https://imran407704.github.io/assets/og.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Caveat:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
-  <script>document.documentElement.classList.add('js');</script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Imran Shaikh",
-    "url": "https://imran407704.github.io/",
-    "image": "https://imran407704.github.io/assets/avatar.jpg",
-    "email": "mailto:imran407704@gmail.com",
-    "jobTitle": "Penetration Tester",
-    "description": "Penetration tester and red teamer working across web, Android, iOS and API security.",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "ANB Solutions Pvt. Ltd"
-    },
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Nirmala Memorial Foundation College of Commerce and Science"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Mumbai",
-      "addressRegion": "Maharashtra",
-      "addressCountry": "IN"
-    },
-    "knowsAbout": ["Penetration testing", "VAPT", "Red teaming", "Android security", "iOS security", "API security", "OWASP Top 10", "Burp Suite"],
-    "hasCredential": [
-      { "@type": "EducationalOccupationalCredential", "name": "Certified Red Team Professional (CRTP)" },
-      { "@type": "EducationalOccupationalCredential", "name": "Certified Red Team Analyst (CRTA)" },
-      { "@type": "EducationalOccupationalCredential", "name": "MCRTA" },
-      { "@type": "EducationalOccupationalCredential", "name": "Certified AppSec Practitioner (CAP)" }
-    ],
-    "sameAs": [
-      "https://github.com/Imran407704",
-      "https://www.linkedin.com/in/imran407704/",
-      "https://x.com/imran407704",
-      "https://www.youtube.com/@cybersecops7146",
-      "https://imran407704.medium.com/"
-    ]
-  }
-  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="pt-wipe" aria-hidden="true"></div>
 
   <div class="preloader" id="preloader" aria-hidden="true">
     <div class="pl-wrap">
-      <svg class="pl-arc" viewBox="0 0 120 120" aria-hidden="true">
-        <circle class="ring r1" cx="60" cy="60" r="52"/>
-        <circle class="ring r2" cx="60" cy="60" r="40"/>
-        <circle class="ring r3" cx="60" cy="60" r="28"/>
-        <circle class="core" cx="60" cy="60" r="10"/>
+      <svg class="pl-logo" viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="none" stroke-linecap="round">
+          <path pathLength="1" d="M27 26 C 18 20, 12 16, 7 9"/>
+          <path pathLength="1" d="M25 30 C 15 27, 9 25, 3 22"/>
+          <path pathLength="1" d="M25 35 C 15 36, 9 38, 3 42"/>
+          <path pathLength="1" d="M27 39 C 19 44, 14 48, 9 54"/>
+          <path pathLength="1" d="M37 26 C 46 20, 52 16, 57 9"/>
+          <path pathLength="1" d="M39 30 C 49 27, 55 25, 61 22"/>
+          <path pathLength="1" d="M39 35 C 49 36, 55 38, 61 42"/>
+          <path pathLength="1" d="M37 39 C 45 44, 50 48, 55 54"/>
+          <path class="sp-body" pathLength="1" d="M32 8 C 35 8 37 11 37 14 L 36 20 C 40 24 42 29 41 34 C 40 41 36 46 32 46 C 28 46 24 41 23 34 C 22 29 24 24 28 20 L 27 14 C 27 11 29 8 32 8 Z"/>
+        </g>
+        <ellipse class="sp-fill" cx="32" cy="34" rx="8.4" ry="11.4"/>
+        <circle class="sp-fill" cx="32" cy="14.4" r="5.4"/>
       </svg>
-      <p class="pl-name">Imran <em>Shaikh</em></p>
-      <p class="pl-line mono-label" id="pl-line">JARVIS &middot; SYSTEMS ONLINE</p>
+      <div class="pl-type" id="plType">
+        <p class="pl-t"><span>Imran <em>Shaikh.</em></span></p>
+        <p class="pl-t"><span>I never forget. I&rsquo;m a <em>security</em> superhero.</span></p>
+        <p class="pl-t"><span>To everyone exploring my work</span></p>
+        <p class="pl-t"><span>With great power comes <em>great responsibility.</em></span></p>
+      </div>
+      <div class="pl-line"><i id="plBar"></i></div>
     </div>
-    <div class="pl-foot">
-      <div class="pl-meter"><i id="pl-bar"></i></div>
-      <p class="pl-pct mono-label" id="pl-pct">0%</p>
-    </div>
-    <button class="pl-skip mono-label" type="button" id="pl-skip">Skip intro</button>
+    <div class="pl-pct" id="plPct">0%</div>
+    <button class="pl-skip" type="button" id="plSkip">Skip</button>
   </div>
 
-  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
-  <div class="hud-grid" aria-hidden="true"></div>
-  <div class="hud-vignette" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-label" id="cursorLabel"></span></div>
 
-  <svg class="icon-sprite" aria-hidden="true" focusable="false">
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
-    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
-    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.55v-2.1c-3.2.7-3.88-1.36-3.88-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.14 1.18a10.9 10.9 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.35.78 1.04.78 2.1v3.11c0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></symbol>
-    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4v16h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-8.5c0-2.03-.04-4.64-2.83-4.64-2.83 0-3.27 2.21-3.27 4.5V24H8V8z"/></symbol>
-    <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.9-6.4L6.3 22H3.2l7.3-8.3L2.5 2h6.3l4.5 5.9L18.9 2zm-1.1 18h1.7L7.1 3.9H5.3L17.8 20z"/></symbol>
-    <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></symbol>
-    <symbol id="i-medium" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M6.5 7.5c0-.4-.1-.7-.4-1L3.6 3.8V3.3h7l2 6.2 2.6-6.2h6.6v.5l-1.4 1.4c-.2.1-.3.4-.3.7v11.6c0 .3.1.6.3.7l1.4 1.4v.5h-8v-.5l1.4-1.4c.2-.2.2-.4.2-.7V8.6l-4.1 11.3h-.9L6.5 8.6v7.6c0 .5.1.9.4 1.2l1.9 2.3v.5H3.2v-.5l1.9-2.3c.3-.3.4-.7.4-1.2V7.5z"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
-    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
-    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.4 7.7-8 9-4.6-1.3-8-4-8-9V6l8-3z"/><path d="m8.5 12 2.3 2.3 4.7-5"/></symbol>
-    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
-    <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12 20 4l-8 16-2-6-6-2z"/></symbol>
-  </svg>
-
-  <header class="site-header">
+  <header class="site-header" id="header">
+    <a href="#home" class="brand" aria-label="Imran Shaikh home">
+      <img src="assets/favicon.svg" alt="" width="30" height="30">
+      <span class="brand-name">Imran Shaikh</span>
+    </a>
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="#top" aria-label="Imran Shaikh, back to top">
-        <span class="brand-arc" aria-hidden="true"></span>
-        <span class="brand-name">Imran Shaikh</span>
-        <span class="brand-tag">STARK OS</span>
-      </a>
-
-      <div class="nav-links" id="nav-links">
-        <a href="#profile" data-nav="profile">Profile</a>
-        <a href="#experience" data-nav="experience">Experience</a>
-        <a href="#arsenal" data-nav="arsenal">Arsenal</a>
-        <a href="#projects" data-nav="projects">Projects</a>
-        <a href="#credentials" data-nav="credentials">Credentials</a>
-        <a href="#contact" data-nav="contact">Contact</a>
-      </div>
-
-      <div class="nav-actions">
-        <button class="jarvis-trigger" type="button" data-jarvis-open aria-haspopup="dialog" aria-controls="jarvis-panel" aria-label="Open JARVIS assistant">
-          <span class="jarvis-dot" aria-hidden="true"></span>
-          <span class="jarvis-trigger-label">JARVIS</span>
-          <kbd>Ctrl K</kbd>
-        </button>
-        <a class="icon-link" href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-          <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
-        </a>
-        <button class="nav-toggle" type="button" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="nav-toggle-box" aria-hidden="true"><i></i><i></i></span>
-        </button>
-      </div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <a class="btn btn-pill magnetic" href="mailto:imran407704@gmail.com"><span>Let&rsquo;s Connect</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><i></i><i></i></button>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu-inner">
-      <p class="mono-label mobile-menu-label">Stark OS / Navigation</p>
-      <nav class="mobile-menu-links" aria-label="Mobile">
-        <a href="#profile"><span>01</span>Profile</a>
-        <a href="#experience"><span>02</span>Experience</a>
-        <a href="#arsenal"><span>03</span>Arsenal</a>
-        <a href="#projects"><span>04</span>Projects</a>
-        <a href="#credentials"><span>05</span>Credentials</a>
-        <a href="#contact"><span>06</span>Contact</a>
-      </nav>
-      <div class="mobile-menu-foot">
-        <a href="mailto:imran407704@gmail.com">Email <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
-        <a href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
-        <a href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer">GitHub <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
-      </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mm-nav" aria-label="Mobile">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="mm-foot">
+      <a href="mailto:imran407704@gmail.com">imran407704@gmail.com</a>
+      <a href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </div>
 
   <main id="main">
-    <section class="hero" id="top">
-      <canvas class="hero-fx" id="hero-fx" aria-hidden="true"></canvas>
+
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <canvas class="hero-fx" id="heroFx" aria-hidden="true"></canvas>
+      <div class="hero-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-inner">
-        <div class="hero-copy">
-          <p class="status-line mono">
-            <span class="live-dot" aria-hidden="true"></span>
-            <span>ARC REACTOR ONLINE</span>
-            <span class="status-sep">/</span>
-            <span>MUMBAI, IN</span>
-            <span class="status-sep">/</span>
-            <span>3.5+ YRS</span>
+        <div class="hero-head">
+          <p class="hero-hi" data-anim="fade">
+            <svg viewBox="0 0 64 64" width="24" height="24" aria-hidden="true"><use href="#spider-mark"/></svg>
+            Hi this is
           </p>
-
-          <h1 class="display hero-title" id="hero-title">
-            <span class="hero-line">Offensive security,</span><br>
-            <span class="hero-line">precision engineered.</span>
-          </h1>
-
-          <p class="lede hero-lede">
-            I am Imran Shaikh, a penetration tester and red teamer at ANB Solutions,
-            a CERT-In empanelled firm. I test web, Android, iOS and API systems for
-            BFSI and telecom clients, then write the finding so it actually gets fixed.
+          <h1 class="hero-name" aria-label="Imran Shaikh, Penetration Tester and Red Teamer"><span class="split-chars">IMRAN</span></h1>
+          <p class="hero-quote" data-anim="fade">
+            <svg viewBox="0 0 64 64" width="26" height="26" aria-hidden="true"><use href="#spider-mark"/></svg>
+            <span class="q-l">I never forget.<br>I&rsquo;m your neighbourhood pentester.</span>
           </p>
+        </div>
+        <div class="hero-copy" data-anim="fade">
+          <h2>Penetration Tester &amp; Red Teamer</h2>
+          <p>With 3.5+ years in offensive security, I test web, API, Android and iOS systems for BFSI and telecom clients at ANB Solutions, a CERT-In empanelled firm — then write the finding so it actually gets fixed.</p>
+          <a class="btn btn-line magnetic" href="#projects"><span>See my work ↓</span></a>
+        </div>
+        <div class="hero-photo" id="heroPhoto" data-cursor="Mask">
+          <div class="hp-card">
+            <img class="hp-img hp-base" src="assets/avatar.jpg" alt="Imran Shaikh standing on a concrete slab in a beige shirt" width="1000" height="1250" decoding="async">
+            <img class="hp-img hp-suit" src="assets/spiderman.svg" alt="" aria-hidden="true" width="1000" height="1250" loading="lazy" decoding="async">
+            <span class="hp-tag" data-hp-tag>MASK OFF</span>
+            <button class="hp-mask-btn" type="button" id="maskBtn" aria-pressed="false">MASK ON</button>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll to about"><span></span></a>
+    </section>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer">
-              Message on LinkedIn
-              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+    <section class="logos" aria-label="Firms and standards I work with">
+      <div class="marquee">
+        <div class="marquee-track" id="logoTrack">
+          <span class="cl">ANB SOLUTIONS<small>CERT-IN EMPANELLED</small></span>
+          <span class="cl">CYBERNX<small>SECURITY CONSULTING</small></span>
+          <span class="cl">CERT-IN<small>SECURE GATING</small></span>
+          <span class="cl">BFSI<small>CLIENT SECTOR</small></span>
+          <span class="cl">TELECOM<small>CLIENT SECTOR</small></span>
+          <span class="cl">OWASP<small>TOP 10 · PTES</small></span>
+          <span class="cl">CRTP<small>RED TEAM PRO</small></span>
+          <span class="cl">CRTA<small>RED TEAM ANALYST</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro" id="about">
+      <h2 class="intro-title scrub-text">Great security comes from great testers</h2>
+      <p class="intro-sub" data-anim="up">- and I&rsquo;m your neighbourhood pentester.</p>
+      <p class="intro-sign" data-anim="up">Imran Shaikh</p>
+    </section>
+
+    <section class="ribbons" aria-label="Disciplines">
+      <div class="ribbon r1"><div class="ribbon-track" data-fill>
+        <span>Web VAPT</span><span class="dot">✦</span><span>API Security</span><span class="dot">✦</span><span>Android</span><span class="dot">✦</span><span>iOS</span><span class="dot">✦</span><span>Red Team</span><span class="dot">✦</span><span>CERT-In</span><span class="dot">✦</span>
+      </div></div>
+      <div class="ribbon r2"><div class="ribbon-track" data-fill>
+        <span>Burp Suite</span><span class="dot">·</span><span>Nmap</span><span class="dot">·</span><span>Metasploit</span><span class="dot">·</span><span>Frida</span><span class="dot">·</span><span>Nuclei</span><span class="dot">·</span><span>Nessus</span><span class="dot">·</span>
+      </div></div>
+    </section>
+
+    <section class="work" id="projects">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow" data-anim="up">Open source</p>
+            <h2 class="h2 split-words">Case studies.</h2>
+          </div>
+          <a href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer" class="btn btn-white magnetic"><span>GitHub →</span></a>
+        </div>
+        <div class="ghost-word" aria-hidden="true">Repos</div>
+        <div class="work-grid">
+          <article class="wcard" data-cursor="View">
+            <a href="https://github.com/Imran407704/HostInjection" target="_blank" rel="noopener noreferrer">
+              <div class="wimg"><span class="tag">Open source · Security</span><span class="cover">HOST</span></div>
+              <div class="wfoot"><div><h3>HostInjection</h3><p class="wdesc">Host header injection &amp; cache poisoning scanner</p></div><span class="vbtn"><span data-stars="hostinjection">★</span> GitHub →</span></div>
             </a>
-            <button class="btn btn-ghost" type="button" data-jarvis-open>
-              <svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg>
-              Ask JARVIS
-            </button>
-          </div>
-
-          <dl class="hero-stats" aria-label="Career at a glance">
-            <div>
-              <dt class="mono-label">Years offensive</dt>
-              <dd class="stat"><span data-stat="years">3.5</span><i>+</i></dd>
-            </div>
-            <div>
-              <dt class="mono-label">Penetration tests</dt>
-              <dd class="stat"><span data-stat="tests">35</span><i>+</i></dd>
-            </div>
-            <div>
-              <dt class="mono-label">CERT-In projects</dt>
-              <dd class="stat"><span data-stat="certin">15</span><i>+</i></dd>
-            </div>
-            <div>
-              <dt class="mono-label">Certifications</dt>
-              <dd class="stat"><span data-stat="certs">6</span></dd>
-            </div>
-          </dl>
-        </div>
-
-        <div class="hero-visual" data-cursor="Drag">
-          <figure class="portrait" id="portrait">
-            <div class="portrait-media" data-cursor="Deploy">
-              <img class="portrait-img portrait-base" src="assets/avatar.jpg" alt="Imran Shaikh standing on a concrete slab in a beige shirt" width="1000" height="1250" decoding="async">
-              <img class="portrait-img portrait-swap" src="assets/ironman.svg" alt="" aria-hidden="true" width="1000" height="1250" loading="lazy" decoding="async">
-              <span class="portrait-scan" aria-hidden="true"></span>
-              <span class="hud-corner hud-tl" aria-hidden="true"></span>
-              <span class="hud-corner hud-tr" aria-hidden="true"></span>
-              <span class="hud-corner hud-bl" aria-hidden="true"></span>
-              <span class="hud-corner hud-br" aria-hidden="true"></span>
-              <span class="portrait-readout mono" aria-hidden="true">
-                <span class="portrait-id">ARC 98.4% / 0x407704</span>
-                <span class="portrait-mode" data-portrait-mode>HUMAN / ONLINE</span>
-              </span>
-            </div>
-            <figcaption class="portrait-foot">
-              <span class="mono-label">Hover to deploy</span>
-              <button class="portrait-toggle mono-label" type="button" id="portrait-toggle" aria-pressed="false">
-                MARK LXXXV
-              </button>
-            </figcaption>
-          </figure>
-
-          <div class="reactor" aria-hidden="true">
-            <svg viewBox="0 0 120 120" class="reactor-svg">
-              <circle cx="60" cy="60" r="52" class="reactor-ring reactor-ring-outer"/>
-              <circle cx="60" cy="60" r="40" class="reactor-ring reactor-ring-inner"/>
-              <circle cx="60" cy="60" r="26" class="reactor-core"/>
-              <g class="reactor-ticks">
-                <path d="M60 2v8M60 110v8M2 60h8M110 60h8"/>
-              </g>
-              <polygon points="60,44 74,53 74,68 60,76 46,68 46,53" class="reactor-tri"/>
-            </svg>
-            <span class="reactor-label mono-label">ARC REACTOR<br>98.4%</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-foot mono-label">
-        <span>Scroll to inspect</span>
-        <span class="hero-foot-line" aria-hidden="true"></span>
-        <span>ID 0x407704</span>
-      </div>
-    </section>
-
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>Web</span><span>API</span><span>Android</span><span>iOS</span><span>VAPT</span><span>Red team</span><span>BFSI</span><span>Telecom</span><span>CERT-In</span><span>Bug bounty</span>
-        <span>Web</span><span>API</span><span>Android</span><span>iOS</span><span>VAPT</span><span>Red team</span><span>BFSI</span><span>Telecom</span><span>CERT-In</span><span>Bug bounty</span>
-      </div>
-    </div>
-
-    <section class="manifest" aria-labelledby="manifest-title">
-      <p class="section-label mono-label">00 / Mission statement</p>
-      <p class="tagline" id="manifest-title" data-reveal-words>
-        Authorization first. Evidence over noise. Write it so the fix is obvious.
-      </p>
-    </section>
-
-    <section class="section profile" id="profile" aria-labelledby="profile-title">
-      <header class="section-head">
-        <p class="section-label mono-label reveal">01 / Profile</p>
-        <h2 class="headline reveal" id="profile-title">Three and a half years inside the perimeter.</h2>
-      </header>
-
-      <div class="profile-grid">
-        <div class="profile-copy reveal">
-          <p class="body-lg">
-            I run web, Android, iOS and API penetration tests across the full VAPT
-            lifecycle: scoping, reconnaissance, exploitation, lateral movement
-            simulation and remediation reporting.
-          </p>
-          <p class="body">
-            My engagements sit mostly in BFSI and telecom, mapped to OWASP Top 10,
-            PTES and CERT-In's Secure Gating Process. I have found everything from
-            textbook injection flaws to logic bugs and AI prompt injection through
-            obfuscation in production systems, and I ship a reproducible proof of
-            concept with each one.
-          </p>
-          <p class="body">
-            Outside client work I write public research through
-            <strong>#Learn365</strong>, publish on Medium, and record security
-            walkthroughs on YouTube.
-          </p>
-
-          <ul class="principle-list">
-            <li><span class="mono-label">01</span><span>Authorization first, always.</span></li>
-            <li><span class="mono-label">02</span><span>Evidence beats noise.</span></li>
-            <li><span class="mono-label">03</span><span>Report so a developer can ship the fix.</span></li>
-          </ul>
-        </div>
-
-        <dl class="facts reveal">
-          <div><dt class="mono-label">Role</dt><dd>Senior Associate &mdash; Cyber Security</dd></div>
-          <div><dt class="mono-label">Company</dt><dd>ANB Solutions Pvt. Ltd</dd></div>
-          <div><dt class="mono-label">Based in</dt><dd>Mumbai, Maharashtra, India</dd></div>
-          <div><dt class="mono-label">Focus</dt><dd>Web / API / Android / iOS / Red team</dd></div>
-          <div><dt class="mono-label">Sectors</dt><dd>BFSI / Telecom / Enterprise</dd></div>
-          <div><dt class="mono-label">Open to</dt><dd>Senior pentest / security consultant roles</dd></div>
-          <div><dt class="mono-label">Toolchain</dt><dd>Burp Suite / Metasploit / Nmap / Frida</dd></div>
-          <div><dt class="mono-label">Status</dt><dd><span class="live-dot" aria-hidden="true"></span> Available for select scopes</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <section class="section experience" id="experience" aria-labelledby="experience-title">
-      <header class="section-head">
-        <p class="section-label mono-label reveal">02 / Service record</p>
-        <h2 class="headline reveal" id="experience-title">Two firms, one continuous mission.</h2>
-      </header>
-
-      <ol class="timeline">
-        <li class="role reveal">
-          <div class="role-meta">
-            <p class="role-period mono-label">Jan 2025 &mdash; Present</p>
-            <p class="role-place mono-label">Mumbai, IN</p>
-          </div>
-          <div class="role-body">
-            <h3 class="role-title">Senior Associate &mdash; Cyber Security</h3>
-            <p class="role-company">ANB Solutions Pvt. Ltd <span class="role-badge mono-label">CERT-In empanelled</span></p>
-            <ul class="role-points">
-              <li>Delivered CERT-In compliant VAPT for 15+ projects under the Secure Gating Process (SGP), with CVSS-rated findings and remediation guidance that reduced client risk by 30&ndash;40%.</li>
-              <li>Acted as the final security gate across web apps, mobile apps, APIs, VA, CR, SIEM, AV and MBSS before project sign-off.</li>
-              <li>Escalated stored XSS, SQL injection and AI prompt injection via obfuscation in production, each with proof-of-concept code.</li>
-              <li>Ran cloud and API assessments against CCM-based checklists, reaching 75% compliance and certifying secure configurations.</li>
-              <li>Owned monthly AppSec cycles tied to Jira stories and signed off feature releases; re-tested with developers until zero regression on criticals.</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="role reveal">
-          <div class="role-meta">
-            <p class="role-period mono-label">Mar 2023 &mdash; Dec 2024</p>
-            <p class="role-place mono-label">Mumbai, IN</p>
-          </div>
-          <div class="role-body">
-            <h3 class="role-title">Associate Security Consultant</h3>
-            <p class="role-company">CyberNX Technologies Pvt. Ltd</p>
-            <ul class="role-points">
-              <li>Performed 35+ penetration tests across web applications and mobile platforms for BFSI and telecom clients.</li>
-              <li>Delivered 5+ end-to-end CERT-In VAPT engagements with CVSS-rated risk classification and step-by-step remediation.</li>
-              <li>Found authentication bypass, stored XSS and NTLM information disclosure using Burp Suite, ffuf and Nuclei.</li>
-              <li>Assessed 6&ndash;7 Android and 2 iOS applications, including insecure WebView implementation and clipboard exposure.</li>
-              <li>Mapped origin IP exposure and WAF bypass vectors, then closed the blind spots with client security teams.</li>
-              <li>Ran red team training and physical exercises: tailgating and BadUSB deployment to demonstrate real access paths.</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="role role-compact reveal">
-          <div class="role-meta">
-            <p class="role-period mono-label">Nov 2022 &mdash; Feb 2023</p>
-            <p class="role-place mono-label">Mumbai, IN</p>
-          </div>
-          <div class="role-body">
-            <h3 class="role-title">Application Security Intern</h3>
-            <p class="role-company">CyberNX Technologies Pvt. Ltd</p>
-            <p class="body role-note">Started on application security testing: manual web checks, reporting and tooling, before moving into full consultant engagements.</p>
-          </div>
-        </li>
-      </ol>
-
-      <aside class="honor reveal">
-        <span class="honor-mark" aria-hidden="true">
-          <svg class="icon"><use href="#i-star"/></svg>
-        </span>
-        <div>
-          <p class="mono-label">Recognition</p>
-          <p class="honor-title">Employee Appreciation Program</p>
-          <p class="body-sm">Awarded for delivery quality and client-facing security work.</p>
-        </div>
-      </aside>
-    </section>
-
-    <section class="section arsenal" id="arsenal" aria-labelledby="arsenal-title">
-      <header class="section-head">
-        <p class="section-label mono-label reveal">03 / Arsenal</p>
-        <h2 class="headline reveal" id="arsenal-title">Suit up. Then break things carefully.</h2>
-        <p class="section-lede reveal">
-          The working toolchain, grouped by the job it does on an engagement.
-        </p>
-      </header>
-
-      <div class="arsenal-grid">
-        <article class="panel reveal">
-          <header class="panel-head">
-            <span class="mono-label">M-01</span>
-            <h3 class="panel-title">Web &amp; API</h3>
-          </header>
-          <ul class="chip-list">
-            <li>Burp Suite</li><li>OWASP ZAP</li><li>SQLmap</li><li>ffuf</li><li>Nuclei</li><li>Nessus</li><li>Nmap</li>
-          </ul>
-          <p class="panel-note">SQL injection, stored XSS, auth bypass, IDOR, WAF bypass, API authorisation testing.</p>
-        </article>
-
-        <article class="panel reveal">
-          <header class="panel-head">
-            <span class="mono-label">M-02</span>
-            <h3 class="panel-title">Mobile</h3>
-          </header>
-          <ul class="chip-list">
-            <li>Frida</li><li>Objection</li><li>MobSF</li><li>Android</li><li>iOS</li>
-          </ul>
-          <p class="panel-note">Insecure WebView, clipboard exposure, root and jailbreak detection bypass, traffic interception.</p>
-        </article>
-
-        <article class="panel reveal">
-          <header class="panel-head">
-            <span class="mono-label">M-03</span>
-            <h3 class="panel-title">Red team</h3>
-          </header>
-          <ul class="chip-list">
-            <li>Metasploit</li><li>Shodan</li><li>Privilege escalation</li><li>Post-exploitation</li><li>BadUSB</li><li>Tailgating</li>
-          </ul>
-          <p class="panel-note">Reconnaissance, exploitation chains, physical entry exercises and access-path proof.</p>
-        </article>
-
-        <article class="panel reveal">
-          <header class="panel-head">
-            <span class="mono-label">M-04</span>
-            <h3 class="panel-title">Cloud &amp; compliance</h3>
-          </header>
-          <ul class="chip-list">
-            <li>CCM checklists</li><li>CERT-In SGP</li><li>OWASP Top 10</li><li>PTES</li><li>CVSS</li>
-          </ul>
-          <p class="panel-note">CERT-In compliant VAPT reporting, cloud configuration review and developer-ready fixes.</p>
-        </article>
-
-        <article class="panel reveal">
-          <header class="panel-head">
-            <span class="mono-label">M-05</span>
-            <h3 class="panel-title">Signals</h3>
-          </header>
-          <ul class="chip-list">
-            <li>MFA / 2FA analysis</li><li>Authentication bypass</li><li>Origin IP discovery</li><li>AI prompt injection</li>
-          </ul>
-          <p class="panel-note">Authentication logic, second-factor weaknesses and emerging AI-surface issues.</p>
-        </article>
-
-        <article class="panel reveal">
-          <header class="panel-head">
-            <span class="mono-label">M-06</span>
-            <h3 class="panel-title">Build</h3>
-          </header>
-          <ul class="chip-list">
-            <li>Python</li><li>Bash</li><li>JavaScript</li><li>Docker</li><li>Git</li><li>Linux</li>
-          </ul>
-          <p class="panel-note">Custom scanners, recon automation and the small tools that keep engagements repeatable.</p>
-        </article>
-      </div>
-
-      <p class="notice reveal">
-        <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
-        <span><strong>Authorized targets only.</strong> Every test runs with explicit written permission and a defined scope.</span>
-      </p>
-    </section>
-
-    <section class="section projects" id="projects" aria-labelledby="projects-title">
-      <header class="section-head">
-        <p class="section-label mono-label reveal">04 / Field builds</p>
-        <h2 class="headline reveal" id="projects-title">Tools built between engagements.</h2>
-        <p class="section-lede reveal">
-          Open source scanners and recon automation from my own GitHub. Star counts are
-          pulled live.
-        </p>
-      </header>
-
-      <div class="work-grid">
-        <article class="project project-featured reveal" data-cursor="View">
-          <div class="project-body">
-            <div class="project-top">
-              <span class="project-index mono-label">P-01</span>
-              <span class="project-kind mono-label">Flagship tool</span>
-            </div>
-            <h3 class="project-title">HostInjection</h3>
-            <p class="project-copy">
-              A fast, single-file scanner for host header injection and web cache
-              poisoning, built for authorized pentests and bug bounty workflows.
-            </p>
-            <div class="project-tags">
-              <span class="tag mono-label">Python</span>
-              <span class="tag mono-label">CLI</span>
-              <span class="tag mono-label">Bug bounty</span>
-            </div>
-            <div class="project-foot">
-              <span class="project-stars mono-label"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> <span data-stars="HostInjection">2</span></span>
-              <a class="project-link" href="https://github.com/Imran407704/HostInjection" target="_blank" rel="noopener noreferrer">
-                Open repository
-                <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-visual" aria-hidden="true">
-            <span class="scan-line"></span>
-            <div class="visual-log">
-              <p><span class="vis-key">GET</span> / HTTP/1.1</p>
-              <p><span class="vis-key">Host:</span> target.com</p>
-              <p class="is-hit"><span class="vis-key">X-Forwarded-Host:</span> evil.net</p>
-              <p><span class="vis-key">Cache-Control:</span> max-age=60</p>
-              <p class="vis-flag">&gt; 200 OK &middot; cache poisoned</p>
-            </div>
-            <div class="visual-foot mono-label">
-              <span>Host / Cache</span>
-              <span class="visual-status"><span class="live-dot" aria-hidden="true"></span> Scanning</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cursor="View">
-          <div class="project-top">
-            <span class="project-index mono-label">P-02</span>
-            <span class="project-kind mono-label">Research archive</span>
-          </div>
-          <h3 class="project-title small">Learn365</h3>
-          <p class="project-copy">365 days of continuous public security research, kept open so the notes stay useful.</p>
-          <div class="project-tags"><span class="tag mono-label">Research</span><span class="tag mono-label">Community</span></div>
-          <div class="project-foot">
-            <span class="project-stars mono-label"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> <span data-stars="Learn365">99</span></span>
-            <a class="project-link" href="https://github.com/Imran407704/Learn365" target="_blank" rel="noopener noreferrer" aria-label="Open the Learn365 repository">
-              <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+          </article>
+          <article class="wcard" data-cursor="View">
+            <a href="https://github.com/Imran407704/Learn365" target="_blank" rel="noopener noreferrer">
+              <div class="wimg"><span class="tag">Research · 365 days</span><span class="cover">365</span></div>
+              <div class="wfoot"><div><h3>Learn365</h3><p class="wdesc">A full year of public security research, kept open</p></div><span class="vbtn"><span data-stars="learn365">★</span> GitHub →</span></div>
             </a>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cursor="View">
-          <div class="project-top">
-            <span class="project-index mono-label">P-03</span>
-            <span class="project-kind mono-label">Recon automation</span>
-          </div>
-          <h3 class="project-title small">passive-subd</h3>
-          <p class="project-copy">Passive subdomain enumeration automated from a single Bash script.</p>
-          <div class="project-tags"><span class="tag mono-label">Bash</span><span class="tag mono-label">Recon</span></div>
-          <div class="project-foot">
-            <span class="project-stars mono-label"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> <span data-stars="passive-subd">7</span></span>
-            <a class="project-link" href="https://github.com/Imran407704/passive-subd" target="_blank" rel="noopener noreferrer" aria-label="Open the passive-subd repository">
-              <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+          </article>
+          <article class="wcard" data-cursor="View">
+            <a href="https://github.com/Imran407704/passive-subd" target="_blank" rel="noopener noreferrer">
+              <div class="wimg"><span class="tag">Recon · Bash</span><span class="cover">SUBD</span></div>
+              <div class="wfoot"><div><h3>passive-subd</h3><p class="wdesc">Passive subdomain enumeration from one script</p></div><span class="vbtn"><span data-stars="passive-subd">★</span> GitHub →</span></div>
             </a>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cursor="View">
-          <div class="project-top">
-            <span class="project-index mono-label">P-04</span>
-            <span class="project-kind mono-label">URL harvesting</span>
-          </div>
-          <h3 class="project-title small">multi-urls</h3>
-          <p class="project-copy">Passive URL harvesting from gau, gauplus and waybackurls across a list of targets.</p>
-          <div class="project-tags"><span class="tag mono-label">Bash</span><span class="tag mono-label">Recon</span></div>
-          <div class="project-foot">
-            <span class="project-stars mono-label"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> <span data-stars="multi-urls">8</span></span>
-            <a class="project-link" href="https://github.com/Imran407704/multi-urls" target="_blank" rel="noopener noreferrer" aria-label="Open the multi-urls repository">
-              <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+          </article>
+          <article class="wcard" data-cursor="View">
+            <a href="https://github.com/Imran407704/multi-urls" target="_blank" rel="noopener noreferrer">
+              <div class="wimg"><span class="tag">Recon · Bash</span><span class="cover">URLS</span></div>
+              <div class="wfoot"><div><h3>multi-urls</h3><p class="wdesc">Passive URL harvesting via gau, gauplus &amp; waybackurls</p></div><span class="vbtn"><span data-stars="multi-urls">★</span> GitHub →</span></div>
             </a>
-          </div>
-        </article>
-
-        <article class="project reveal" data-cursor="View">
-          <div class="project-top">
-            <span class="project-index mono-label">P-05</span>
-            <span class="project-kind mono-label">Workflow</span>
-          </div>
-          <h3 class="project-title small">archive</h3>
-          <p class="project-copy">URL aggregation and archival automation for the repetitive part of recon.</p>
-          <div class="project-tags"><span class="tag mono-label">Bash</span><span class="tag mono-label">Automation</span></div>
-          <div class="project-foot">
-            <span class="project-stars mono-label"><svg class="icon icon-star" aria-hidden="true"><use href="#i-star"/></svg> <span data-stars="archive">6</span></span>
-            <a class="project-link" href="https://github.com/Imran407704/archive" target="_blank" rel="noopener noreferrer" aria-label="Open the archive repository">
-              <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <a class="project project-cta reveal" href="https://github.com/Imran407704?tab=repositories" target="_blank" rel="noopener noreferrer">
-          <span class="project-index mono-label">P-06 / Index</span>
-          <span class="cta-title">All repositories</span>
-          <span class="cta-copy">Tools, experiments and archives. The full index lives on GitHub.</span>
-          <span class="cta-link mono-label">
-            github.com/Imran407704
-            <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
-          </span>
-        </a>
-      </div>
-
-      <dl class="telemetry reveal" aria-label="Live GitHub telemetry">
-        <div>
-          <dt class="mono-label">Public repositories</dt>
-          <dd class="telemetry-value" data-stat="repos">27</dd>
+          </article>
         </div>
-        <div>
-          <dt class="mono-label">Stars earned</dt>
-          <dd class="telemetry-value" data-stat="stars">129</dd>
-        </div>
-        <div>
-          <dt class="mono-label">Followers</dt>
-          <dd class="telemetry-value" data-stat="followers">31</dd>
-        </div>
-        <div>
-          <dt class="mono-label">Building since</dt>
-          <dd class="telemetry-value">2019</dd>
-        </div>
-      </dl>
-    </section>
-
-    <section class="section credentials" id="credentials" aria-labelledby="credentials-title">
-      <header class="section-head">
-        <p class="section-label mono-label reveal">05 / Credentials</p>
-        <h2 class="headline reveal" id="credentials-title">Certified, and still studying.</h2>
-        <p class="section-lede reveal">
-          Offensive security certifications, formal education and the habit that keeps
-          both current.
-        </p>
-      </header>
-
-      <div class="cred-grid">
-        <article class="cred reveal">
-          <p class="mono-label cred-code">CRTP</p>
-          <h3 class="cred-title">Certified Red Team Professional</h3>
-          <p class="body-sm cred-note">Active Directory attack paths, privilege escalation and defence evasion.</p>
-        </article>
-        <article class="cred reveal">
-          <p class="mono-label cred-code">CRTA</p>
-          <h3 class="cred-title">Certified Red Team Analyst</h3>
-          <p class="body-sm cred-note">Adversary simulation, infrastructure and operator tradecraft.</p>
-        </article>
-        <article class="cred reveal">
-          <p class="mono-label cred-code">MCRTA</p>
-          <h3 class="cred-title">Multi-Cloud Red Team Analyst</h3>
-          <p class="body-sm cred-note">Cloud attack surface, identity abuse and post-exploitation.</p>
-        </article>
-        <article class="cred reveal">
-          <p class="mono-label cred-code">CAP</p>
-          <h3 class="cred-title">Certified AppSec Practitioner</h3>
-          <p class="body-sm cred-note">Application security fundamentals and secure code review.</p>
-        </article>
-        <article class="cred reveal">
-          <p class="mono-label cred-code">IOS</p>
-          <h3 class="cred-title">iOS Pentesting</h3>
-          <p class="body-sm cred-note">iOS app assessment, traffic interception and runtime analysis.</p>
-        </article>
-        <article class="cred reveal">
-          <p class="mono-label cred-code">BURP</p>
-          <h3 class="cred-title">Burp Suite in Depth</h3>
-          <p class="body-sm cred-note">Advanced Burp workflow, extensions and manual testing depth.</p>
-        </article>
-      </div>
-
-      <div class="cred-lower">
-        <article class="panel reveal">
-          <header class="panel-head">
-            <span class="mono-label">E-01</span>
-            <h3 class="panel-title">Education</h3>
-          </header>
-          <p class="cred-title small">BSc Information Technology</p>
-          <p class="body-sm">Nirmala Memorial Foundation College of Commerce and Science, Mumbai</p>
-          <p class="mono-label cred-period">2019 &mdash; 2020</p>
-        </article>
-
-        <article class="panel reveal">
-          <header class="panel-head">
-            <span class="mono-label">E-02</span>
-            <h3 class="panel-title">Continuous research</h3>
-          </header>
-          <p class="cred-title small">#Learn365</p>
-          <p class="body-sm">365 consecutive days of public security research, notes and labs kept open for everyone.</p>
-          <p class="mono-label cred-period">Public archive on GitHub</p>
-        </article>
-
-        <article class="panel reveal">
-          <header class="panel-head">
-            <span class="mono-label">E-03</span>
-            <h3 class="panel-title">Recognition</h3>
-          </header>
-          <p class="cred-title small">Employee Appreciation Program</p>
-          <p class="body-sm">Awarded for delivery quality and client-facing security work.</p>
-          <p class="mono-label cred-period">ANB Solutions</p>
-        </article>
       </div>
     </section>
 
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <p class="section-label mono-label reveal">06 / Uplink</p>
-      <h2 class="display contact-title reveal" id="contact-title">Have a scope<br>worth testing?</h2>
-      <p class="lede contact-lede reveal">
-        Send the surface, the framework and the window. I reply fastest on LinkedIn or
-        email. If you just want the short version, ask JARVIS first.
-      </p>
-
-      <div class="contact-grid reveal">
-        <a class="contact-link" href="mailto:imran407704@gmail.com">
-          <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="#i-mail"/></svg></span>
-          <span class="contact-copy"><span class="mono-label">Email</span><span class="contact-value">imran407704@gmail.com</span></span>
-          <svg class="icon contact-end" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
-        </a>
-        <a class="contact-link" href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer">
-          <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="#i-linkedin"/></svg></span>
-          <span class="contact-copy"><span class="mono-label">LinkedIn</span><span class="contact-value">in/imran407704</span></span>
-          <svg class="icon contact-end" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
-        </a>
-        <a class="contact-link" href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer">
-          <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="#i-github"/></svg></span>
-          <span class="contact-copy"><span class="mono-label">GitHub</span><span class="contact-value">Imran407704</span></span>
-          <svg class="icon contact-end" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
-        </a>
-        <a class="contact-link" href="https://imran407704.medium.com/" target="_blank" rel="noopener noreferrer">
-          <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="#i-medium"/></svg></span>
-          <span class="contact-copy"><span class="mono-label">Writing</span><span class="contact-value">imran407704.medium.com</span></span>
-          <svg class="icon contact-end" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
-        </a>
-        <a class="contact-link" href="https://www.youtube.com/@cybersecops7146" target="_blank" rel="noopener noreferrer">
-          <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="#i-youtube"/></svg></span>
-          <span class="contact-copy"><span class="mono-label">YouTube</span><span class="contact-value">@cybersecops7146</span></span>
-          <svg class="icon contact-end" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
-        </a>
-        <a class="contact-link" href="https://x.com/imran407704" target="_blank" rel="noopener noreferrer">
-          <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="#i-x"/></svg></span>
-          <span class="contact-copy"><span class="mono-label">X</span><span class="contact-value">@imran407704</span></span>
-          <svg class="icon contact-end" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
-        </a>
+    <section class="about">
+      <div class="container narrow">
+        <h2 class="about-title split-words">I was built to break in</h2>
+        <p class="about-lead scrub-text">I&rsquo;m a penetration tester and red teamer with 3.5+ years of experience, currently a Senior Associate in Cyber Security at ANB Solutions. Before that, Associate Security Consultant at CyberNX Technologies. 35+ penetration tests, 15+ CERT-In compliant engagements, and a habit of shipping reproducible proof of concept with every finding.</p>
       </div>
+    </section>
 
-      <button class="btn btn-primary contact-cta reveal" type="button" data-jarvis-open>
-        <svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg>
-        Run the JARVIS brief
-      </button>
+    <section class="gallery" aria-labelledby="galTitle">
+      <h2 class="gal-title" id="galTitle" data-anim="fade">MORE REPOS</h2>
+      <div class="gal-rows">
+        <div class="gal-row" data-fill>
+          <a class="gcard" href="https://github.com/Imran407704/archive" target="_blank" rel="noopener noreferrer" data-cursor="View"><span class="gimg">ARCHIVE</span><span class="gcap"><b>archive</b><i>URL aggregation</i></span></a>
+          <a class="gcard" href="https://github.com/Imran407704/list-target" target="_blank" rel="noopener noreferrer" data-cursor="View"><span class="gimg">TARGET</span><span class="gcap"><b>list-target</b><i>Target list tooling</i></span></a>
+          <a class="gcard" href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer" data-cursor="View"><span class="gimg">27 REPOS</span><span class="gcap"><b>github.com/Imran407704</b><i>129+ stars</i></span></a>
+          <a class="gcard" href="https://github.com/Imran407704/passive-subd" target="_blank" rel="noopener noreferrer" data-cursor="View"><span class="gimg">SUBD</span><span class="gcap"><b>passive-subd</b><i>Subdomain enum</i></span></a>
+        </div>
+        <div class="gal-row rev" data-fill>
+          <a class="gcard" href="https://github.com/Imran407704/multi-urls" target="_blank" rel="noopener noreferrer" data-cursor="View"><span class="gimg">URLS</span><span class="gcap"><b>multi-urls</b><i>URL harvesting</i></span></a>
+          <a class="gcard" href="https://imran407704.medium.com/" target="_blank" rel="noopener noreferrer" data-cursor="View"><span class="gimg">WRITE-UPS</span><span class="gcap"><b>Medium</b><i>Security write-ups</i></span></a>
+          <a class="gcard" href="https://www.youtube.com/@cybersecops7146" target="_blank" rel="noopener noreferrer" data-cursor="View"><span class="gimg">WALKTHROUGHS</span><span class="gcap"><b>YouTube</b><i>@cybersecops7146</i></span></a>
+          <a class="gcard" href="https://github.com/Imran407704/HostInjection" target="_blank" rel="noopener noreferrer" data-cursor="View"><span class="gimg">HOST</span><span class="gcap"><b>HostInjection</b><i>HHI scanner</i></span></a>
+        </div>
+      </div>
+      <div class="gal-cta">
+        <a href="https://github.com/Imran407704?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-white magnetic gal-btn"><span>Explore all repositories →</span></a>
+      </div>
+    </section>
+
+    <section class="xp2" id="experience" aria-labelledby="xpTitle">
+      <div class="xp-pin">
+        <div class="container xp-grid">
+          <div class="xp-side">
+            <p class="eyebrow">My story</p>
+            <h2 class="h2 xp-title" id="xpTitle">Let's go back in time.</h2>
+            <div class="xp-year" aria-hidden="true"><span id="xpYear">2025</span></div>
+            <p class="xp-meta mono" aria-hidden="true"><span id="xpDate">Jan 2025 – Present</span><span class="xp-sep">·</span><span id="xpCo">ANB Solutions</span></p>
+            <div class="xp-count mono" aria-hidden="true"><b id="xpIdx">01</b> / 04<span class="xp-bar"><i id="xpBar"></i></span></div>
+          </div>
+          <div class="xp-rail">
+            <span class="xp-line" aria-hidden="true"><i class="xp-fill" id="xpFill"></i></span>
+            <span class="xp-mark" id="xpMark" aria-hidden="true"></span>
+            <ol class="xp-track" id="xpTrack">
+              <li class="xt" data-year="2025" data-date="Jan 2025 – Present" data-co="ANB Solutions">
+                <span class="xt-dot" aria-hidden="true"></span>
+                <p class="xt-date mono">Jan 2025 – Present</p>
+                <h3 class="xt-role">Senior Associate — Cyber Security</h3>
+                <p class="xt-co">ANB Solutions · CERT-In empanelled</p>
+                <div class="xt-body">
+                  <p>Final security gate before client sign-off. 15+ CERT-In compliant VAPT projects across web, mobile, API, VA, CR, SIEM, AV and MBSS — mapped to the CERT-In Secure Gating Process with CVSS-rated findings and remediation tracking.</p>
+                  <div class="xp-projects">
+                    <div><h4>CERT-In secure gating</h4><p>Web, Android, iOS and API VAPT for BFSI and telecom clients, delivered end to end with the audit trail regulators expect.</p></div>
+                    <div><h4>Employee Appreciation Program</h4><p>Awarded for delivery quality and client-facing security work.</p></div>
+                  </div>
+                </div>
+              </li>
+              <li class="xt" data-year="2023" data-date="Mar 2023 – Dec 2024" data-co="CyberNX Technologies">
+                <span class="xt-dot" aria-hidden="true"></span>
+                <p class="xt-date mono">Mar 2023 – Dec 2024</p>
+                <h3 class="xt-role">Associate Security Consultant</h3>
+                <p class="xt-co">CyberNX Technologies</p>
+                <div class="xt-body">
+                  <p>35+ penetration tests across web, API and mobile. 5+ end-to-end CERT-In engagements from scoping to sign-off, plus red team exercises covering privilege escalation, BadUSB and physical entry.</p>
+                  <ul class="chips"><li>Web VAPT</li><li>API VAPT</li><li>Android</li><li>iOS</li><li>CERT-In</li><li>Red team</li></ul>
+                </div>
+              </li>
+              <li class="xt" data-year="2022" data-date="Nov 2022 – Feb 2023" data-co="CyberNX Technologies">
+                <span class="xt-dot" aria-hidden="true"></span>
+                <p class="xt-date mono">Nov 2022 – Feb 2023</p>
+                <h3 class="xt-role">Application Security Intern</h3>
+                <p class="xt-co">CyberNX Technologies</p>
+                <div class="xt-body">
+                  <p>Where it started. Learned the VAPT lifecycle hands-on: reconnaissance, exploitation and reporting under senior review, and turned the internship into a full-time offer.</p>
+                </div>
+              </li>
+              <li class="xt xt-edu" data-year="2020" data-date="2019 – 2020 · Education" data-co="Nirmala College, Mumbai">
+                <span class="xt-dot" aria-hidden="true"></span>
+                <p class="xt-date mono">2019 – 2020 · Education</p>
+                <h3 class="xt-role">BSc, Information Technology</h3>
+                <p class="xt-co">Nirmala Memorial Foundation College of Commerce and Science</p>
+                <div class="xt-body">
+                  <p>Mumbai. The degree was the baseline — the 365 consecutive days of public security research that followed were the real education.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="auto" aria-labelledby="autoTitle">
+      <div class="container">
+        <div class="auto-wrap">
+          <div class="auto-text">
+            <p class="eyebrow">Offensive tooling</p>
+            <h2 class="h2 auto-title" id="autoTitle">
+              <span class="auto-ln"><span>Tools that do the</span></span>
+              <span class="auto-ln"><span>repetitive hunting</span></span>
+              <span class="auto-ln"><span>so I can think.</span></span>
+            </h2>
+            <p class="auto-sub">Bash pipelines and scanners that automate the passive recon layer, flag injection classes early and feed straight into my test plans. Everything is open source on GitHub.</p>
+            <a class="btn btn-pill magnetic auto-cta" href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer"><span>Browse the tooling</span></a>
+          </div>
+          <div class="auto-grid">
+            <article class="auto-card" tabindex="0">
+              <div class="auto-top">
+                <svg class="auto-ic icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+                <span class="auto-no mono">01</span>
+              </div>
+              <span class="auto-div" aria-hidden="true"></span>
+              <h3>HostInjection</h3>
+              <p>Automated host header injection and web cache poisoning detection across target lists, with reproducible payloads per finding.</p>
+            </article>
+            <article class="auto-card" tabindex="0">
+              <div class="auto-top">
+                <svg class="auto-ic icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                <span class="auto-no mono">02</span>
+              </div>
+              <span class="auto-div" aria-hidden="true"></span>
+              <h3>passive-subd</h3>
+              <p>Passive subdomain enumeration from a single Bash script — no active noise, straight from public data sources.</p>
+            </article>
+            <article class="auto-card" tabindex="0">
+              <div class="auto-top">
+                <svg class="auto-ic icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
+                <span class="auto-no mono">03</span>
+              </div>
+              <span class="auto-div" aria-hidden="true"></span>
+              <h3>multi-urls + archive</h3>
+              <p>Passive URL harvesting via gau, gauplus and waybackurls across large target lists, aggregated and de-duplicated automatically.</p>
+            </article>
+            <article class="auto-card" tabindex="0">
+              <div class="auto-top">
+                <svg class="auto-ic icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v6h6"/><path d="M5 21V3h9l5 5v13z"/></svg>
+                <span class="auto-no mono">04</span>
+              </div>
+              <span class="auto-div" aria-hidden="true"></span>
+              <h3>#Learn365</h3>
+              <p>365 consecutive days of public security research — web, API and mobile notes kept open so others can learn from the process.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc" aria-labelledby="svcTitle">
+      <div class="svc-glow" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow" data-anim="up">Services</p>
+        <h2 class="h2 split-words" id="svcTitle">What I do</h2>
+        <ul class="svc-list">
+          <li class="svc-row">
+            <div class="svc-name"><h3>Web VAPT</h3><sup class="mono">01</sup></div>
+            <div class="svc-desc"><p>Full lifecycle testing mapped to OWASP Top 10 and PTES: scoping, recon, exploitation, CVSS-rated findings and remediation reporting.</p>
+            <div class="svc-tags"><span># Recon</span><span># Exploitation</span><span># Reporting</span></div></div>
+          </li>
+          <li class="svc-row">
+            <div class="svc-name"><h3>API Security</h3><sup class="mono">02</sup></div>
+            <div class="svc-desc"><p>REST and GraphQL APIs tested for broken object level authorization, mass assignment, injection and business logic flaws.</p>
+            <div class="svc-tags"><span># BOLA</span><span># Logic flaws</span><span># Postman/Burp</span></div></div>
+          </li>
+          <li class="svc-row">
+            <div class="svc-name"><h3>Android VAPT</h3><sup class="mono">03</sup></div>
+            <div class="svc-desc"><p>Static and dynamic analysis, Frida/Objection hooking, insecure storage, certificate pinning bypass and deep link abuse.</p>
+            <div class="svc-tags"><span># Frida</span><span># MobSF</span><span># Objection</span></div></div>
+          </li>
+          <li class="svc-row">
+            <div class="svc-name"><h3>iOS VAPT</h3><sup class="mono">04</sup></div>
+            <div class="svc-desc"><p>IPA analysis, keychain and plist review, runtime instrumentation and jailbreak-detection assessment with certified training behind it.</p>
+            <div class="svc-tags"><span># Keychain</span><span># Runtime</span><span># Certified</span></div></div>
+          </li>
+          <li class="svc-row">
+            <div class="svc-name"><h3>Red Team</h3><sup class="mono">05</sup></div>
+            <div class="svc-desc"><p>Adversary simulation: privilege escalation, lateral movement, BadUSB and physical entry exercises against real defenses.</p>
+            <div class="svc-tags"><span># Metasploit</span><span># Privesc</span><span># Physical</span></div></div>
+          </li>
+          <li class="svc-row">
+            <div class="svc-name"><h3>CERT-In Secure Gating</h3><sup class="mono">06</sup></div>
+            <div class="svc-desc"><p>Engagements delivered end to end against the CERT-In empanelment process, ready for regulator and client sign-off.</p>
+            <div class="svc-tags"><span># 15+ projects</span><span># VA / CR</span><span># SIEM / AV</span></div></div>
+          </li>
+          <li class="svc-row">
+            <div class="svc-name"><h3>MBSS &amp; Hardening</h3><sup class="mono">07</sup></div>
+            <div class="svc-desc"><p>Mobile-based security screening and configuration hardening reviews for BFSI and telecom environments.</p>
+            <div class="svc-tags"><span># BFSI</span><span># Telecom</span><span># Hardening</span></div></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="tools" aria-labelledby="toolsTitle">
+      <p class="pill-label mono"><i aria-hidden="true"></i>Daily drivers</p>
+      <h2 class="tools-title split-words" id="toolsTitle">The tools<br>I hack with</h2>
+      <p class="tools-sub" data-anim="up">Offensive tooling I use day to day across web, mobile, API and red team engagements.</p>
+      <div class="tools-ring">
+        <div class="tools-track" id="toolsTrack">
+          <figure class="tool"><span class="ti-tile">BURP</span><figcaption>Burp Suite</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">NMAP</span><figcaption>Nmap</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">MSF</span><figcaption>Metasploit</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">FRIDA</span><figcaption>Frida</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">OBJ</span><figcaption>Objection</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">MOBSF</span><figcaption>MobSF</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">ZAP</span><figcaption>OWASP ZAP</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">SQLM</span><figcaption>SQLmap</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">FFUF</span><figcaption>ffuf</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">NUCL</span><figcaption>Nuclei</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">NESS</span><figcaption>Nessus</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">SHOD</span><figcaption>Shodan</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">PY</span><figcaption>Python</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">SH</span><figcaption>Bash</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">DOCK</span><figcaption>Docker</figcaption></figure>
+          <figure class="tool"><span class="ti-tile">GIT</span><figcaption>Git</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="both" id="both" aria-labelledby="bothTitle">
+      <div class="b2-box">
+        <p class="b2-think" data-anim="fade">You think</p>
+        <h2 class="b2-title split-words" id="bothTitle">I'm a penetration tester or a red teamer</h2>
+        <p class="b2-both" data-anim="up">I'm Both</p>
+        <div class="b2-cw" data-anim="up">
+          <figure class="b2-card"><img src="assets/avatar.jpg" alt="Imran Shaikh" loading="lazy" width="1000" height="1250"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="creds" aria-labelledby="credsTitle">
+      <div class="creds-head">
+        <p class="eyebrow" style="justify-content:center" data-anim="up">Credentials</p>
+        <h2 id="credsTitle" data-anim="up">Certified to attack.<br>Trusted to report.</h2>
+        <p data-anim="up">Red team and appsec certifications, plus the recognition that came with the work.</p>
+      </div>
+      <div class="creds-grid">
+        <article class="cred-card" data-anim="up"><span class="cred-code">CRTP</span><h3 class="cred-title">Certified Red Team Professional</h3><p class="cred-note">Active Directory attack paths, lateral movement and delegation abuse.</p></article>
+        <article class="cred-card" data-anim="up"><span class="cred-code">CRTA</span><h3 class="cred-title">Certified Red Team Analyst</h3><p class="cred-note">Adversary simulation and threat-informed offense against real defenses.</p></article>
+        <article class="cred-card" data-anim="up"><span class="cred-code">MCRTA</span><h3 class="cred-title">Multi-Cloud Red Team Analyst</h3><p class="cred-note">Cloud attack surface and identity-based attack paths across providers.</p></article>
+        <article class="cred-card" data-anim="up"><span class="cred-code">CAP</span><h3 class="cred-title">Certified AppSec Practitioner</h3><p class="cred-note">Application security fundamentals, from SDLC to secure review.</p></article>
+        <article class="cred-card" data-anim="up"><span class="cred-code">iOS</span><h3 class="cred-title">iOS Pentesting</h3><p class="cred-note">Certified training in iOS application attack techniques and runtime analysis.</p></article>
+        <article class="cred-card" data-anim="up"><span class="cred-code">BURP</span><h3 class="cred-title">Burp Suite in Depth</h3><p class="cred-note">Advanced Burp workflows: extensions, macros and scanner tuning.</p></article>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="cta-inner">
+        <div class="stats">
+          <div><span class="stat-v"><b data-count="3.5" data-decimals="1">0</b><b>+</b></span><span>Years of experience</span></div>
+          <div><span class="stat-v"><b data-count="35">0</b><b>+</b></span><span>Penetration tests</span></div>
+          <div><span class="stat-v"><b data-count="15">0</b><b>+</b></span><span>CERT-In projects</span></div>
+          <div class="stats-x" data-anim="up"><div><b>Employee Appreciation</b><span>ANB Solutions</span></div><div><b>English · Hindi</b><span>Languages</span></div></div>
+        </div>
+        <div class="cta-bottom">
+          <div>
+            <p>Have a scope worth testing? Send the surface, the framework and the window — I reply fastest on LinkedIn or email.</p>
+            <div class="cta-btns">
+              <a class="btn btn-white magnetic" href="mailto:imran407704@gmail.com"><span>Start a project ↗</span></a>
+              <a class="btn btn-line magnetic" href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer"><span>LinkedIn ↗</span></a>
+            </div>
+          </div>
+          <ul class="cta-tags"><li>Web VAPT</li><li>API Security</li><li>Red Team</li><li>CERT-In gating</li></ul>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-top">
-      <p class="footer-brand"><span class="brand-arc" aria-hidden="true"></span> STARK OS <span class="footer-dim">/ portfolio build 4.7</span></p>
-      <a class="footer-top-link mono-label" href="#top">
-        Back to top
-        <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
-      </a>
+  <footer class="footer">
+    <div class="container foot-top">
+      <div class="foot-links"><a href="#projects">Work</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+      <div class="foot-social">
+        <a href="mailto:imran407704@gmail.com">imran407704@gmail.com</a>
+        <a href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://imran407704.medium.com/" target="_blank" rel="noopener noreferrer">Medium</a>
+        <a href="https://x.com/imran407704" target="_blank" rel="noopener noreferrer">X</a>
+      </div>
     </div>
-    <p class="footer-wordmark" id="wordmark" aria-hidden="true">IMRAN SHAIKH</p>
-
-    <div class="footer-bottom mono-label">
-      <p>&copy; <span id="year">2026</span> Imran Shaikh. Mumbai, India.</p>
-      <p><a href="privacy.html">Privacy</a><span class="footer-sep">/</span><a href="terms.html">Terms</a><span class="footer-sep">/</span><span>No cookies. No trackers.</span></p>
+    <div class="wordmark" aria-label="Imran Shaikh"><span class="split-chars">IMRAN SHAIKH</span></div>
+    <div class="container foot-bottom">
+      <span>&copy; <span id="year">2026</span> Imran Shaikh</span>
+      <span>Penetration Tester &amp; Red Teamer · <a href="privacy.html" style="color:inherit">Privacy</a> · <a href="terms.html" style="color:inherit">Terms</a></span>
     </div>
   </footer>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="spider-mark">
+        <g fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+          <path fill="none" d="M27 26 C 18 20, 12 16, 7 9"/><path fill="none" d="M25 30 C 15 27, 9 25, 3 22"/>
+          <path fill="none" d="M25 35 C 15 36, 9 38, 3 42"/><path fill="none" d="M27 39 C 19 44, 14 48, 9 54"/>
+          <path fill="none" d="M37 26 C 46 20, 52 16, 57 9"/><path fill="none" d="M39 30 C 49 27, 55 25, 61 22"/>
+          <path fill="none" d="M39 35 C 49 36, 55 38, 61 42"/><path fill="none" d="M37 39 C 45 44, 50 48, 55 54"/>
+        </g>
+        <ellipse cx="32" cy="34" rx="9" ry="12" fill="currentColor"/>
+        <circle cx="32" cy="20" r="6.5" fill="currentColor"/>
+      </g>
+    </defs>
+  </svg>
 
   <div class="jarvis" id="jarvis-panel" role="dialog" aria-modal="false" aria-labelledby="jarvis-title" aria-describedby="jarvis-desc" hidden>
     <div class="jarvis-head">
       <span class="jarvis-orb" aria-hidden="true"></span>
-      <span class="jarvis-name" id="jarvis-title">JARVIS</span>
-      <span class="jarvis-status mono-label" id="jarvis-status">ONLINE</span>
-      <button class="jarvis-persona mono-label" type="button" id="jarvis-persona" aria-label="Switch assistant to FRIDAY">FRIDAY</button>
-      <button class="jarvis-close" type="button" id="jarvis-close" aria-label="Close JARVIS">
-        <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+      <span class="jarvis-name" id="jarvis-title">KAREN</span>
+      <span class="jarvis-status mono" id="jarvis-status">ONLINE</span>
+      <button class="jarvis-persona mono" type="button" id="jarvis-persona" aria-label="Switch assistant to JARVIS">JARVIS</button>
+      <button class="jarvis-close" type="button" id="jarvis-close" aria-label="Close assistant">
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
-
-    <p class="jarvis-desc mono-label" id="jarvis-desc">Local brief on Imran. No account, no tracking.</p>
-
-    <div class="jarvis-log" id="jarvis-log" role="log" aria-live="polite" aria-relevant="additions"></div>
-
+    <div class="jarvis-log" id="jarvis-log" role="log" aria-live="polite"></div>
     <div class="jarvis-chips" id="jarvis-chips">
       <button type="button" data-ask="experience">Experience</button>
-      <button type="button" data-ask="certifications">Certifications</button>
+      <button type="button" data-ask="certifications">Certs</button>
       <button type="button" data-ask="tools">Tools</button>
       <button type="button" data-ask="projects">Projects</button>
       <button type="button" data-ask="contact">Contact</button>
     </div>
-
     <form class="jarvis-form" id="jarvis-form">
-      <label class="sr-only" for="jarvis-input">Ask JARVIS about Imran</label>
+      <label class="sr-only" for="jarvis-input">Ask the assistant about Imran</label>
       <input id="jarvis-input" class="jarvis-input" type="text" placeholder="Ask about experience, certs, tools, contact..." autocomplete="off" spellcheck="false">
       <button class="jarvis-send" type="submit" aria-label="Send question">
-        <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
       </button>
     </form>
-
-    <p class="jarvis-hint mono-label">Ctrl K to toggle &middot; Esc to close &middot; scripted, not a live model</p>
+    <p class="jarvis-hint mono">Ctrl K to toggle &middot; Esc to close &middot; scripted, not a live model</p>
   </div>
 
+  <button class="jarvis-fab btn btn-pill" type="button" data-jarvis-open style="position:fixed;right:16px;bottom:16px;z-index:105;min-height:48px">
+    <span>Ask KAREN</span>
+  </button>
+
   <noscript>
-    <p class="noscript">JavaScript is off. All content and links still work. The intro, the 3D hero, the custom cursor and JARVIS need JavaScript.</p>
+    <p class="noscript">JavaScript is off. All content and links still work. The intro, the 3D hero, the custom cursor and the assistant need JavaScript.</p>
   </noscript>
 
   <script type="module" src="js/main.js"></script>

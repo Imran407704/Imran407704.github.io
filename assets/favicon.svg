@@ -1,24 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-    <radialGradient id="g" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="0.34" stop-color="#d9fbff"/>
-      <stop offset="0.62" stop-color="#6fe3f5"/>
-      <stop offset="1" stop-color="#1f9dbd" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffe0a0"/>
-      <stop offset="0.5" stop-color="#f2c14e"/>
-      <stop offset="1" stop-color="#a97712"/>
+    <linearGradient id="r" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e62429"/>
+      <stop offset="1" stop-color="#8f0105"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="#08080a"/>
-  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#e62429" stroke-opacity="0.32"/>
-  <circle cx="32" cy="32" r="17" fill="none" stroke="url(#gold)" stroke-width="1.6"/>
-  <circle cx="32" cy="32" r="12.5" fill="url(#g)"/>
-  <circle cx="32" cy="32" r="7.5" fill="#effeff"/>
-  <circle cx="32" cy="32" r="3" fill="#ffffff"/>
-  <g stroke="#8fe8ff" stroke-width="1.6" stroke-linecap="round" opacity="0.7">
-    <path d="M32 12v4"/><path d="M32 48v4"/><path d="M12 32h4"/><path d="M48 32h4"/>
+  <rect width="64" height="64" rx="14" fill="#0a0a0a"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#C90207" stroke-opacity="0.4"/>
+  <g fill="url(#r)" stroke="url(#r)" stroke-width="2.2" stroke-linecap="round">
+    <!-- legs -->
+    <path fill="none" d="M27 26 C 18 20, 12 16, 7 9"/>
+    <path fill="none" d="M25 30 C 15 27, 9 25, 3 22"/>
+    <path fill="none" d="M25 35 C 15 36, 9 38, 3 42"/>
+    <path fill="none" d="M27 39 C 19 44, 14 48, 9 54"/>
+    <path fill="none" d="M37 26 C 46 20, 52 16, 57 9"/>
+    <path fill="none" d="M39 30 C 49 27, 55 25, 61 22"/>
+    <path fill="none" d="M39 35 C 49 36, 55 38, 61 42"/>
+    <path fill="none" d="M37 39 C 45 44, 50 48, 55 54"/>
   </g>
+  <ellipse cx="32" cy="34" rx="9" ry="12" fill="url(#r)"/>
+  <circle cx="32" cy="20" r="6.5" fill="url(#r)"/>
+  <circle cx="29.4" cy="18.6" r="1.2" fill="#0a0a0a"/>
+  <circle cx="34.6" cy="18.6" r="1.2" fill="#0a0a0a"/>
 </svg>
