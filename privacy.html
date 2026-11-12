@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy | Imran Shaikh</title>
   <meta name="description" content="How this portfolio handles data. No cookies, no trackers, no analytics.">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#08080A">
   <link rel="canonical" href="https://imran407704.github.io/privacy.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,45 +14,51 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="liquid" aria-hidden="true">
-    <span class="liquid-blob liquid-blob-1"></span>
-    <span class="liquid-blob liquid-blob-2"></span>
-  </div>
-  <div class="grain" aria-hidden="true"></div>
+  <div class="hud-grid" aria-hidden="true"></div>
+  <div class="hud-vignette" aria-hidden="true"></div>
+
+  <header class="site-header is-scrolled">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Imran Shaikh, back to portfolio">
+        <span class="brand-arc" aria-hidden="true"></span>
+        <span class="brand-name">Imran Shaikh</span>
+        <span class="brand-tag">STARK OS</span>
+      </a>
+      <a class="btn btn-ghost" href="index.html">
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        Back to portfolio
+      </a>
+    </nav>
+  </header>
 
   <main class="legal">
-    <a class="legal-back body-6" href="index.html">
-      <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-      Back to portfolio
-    </a>
-
-    <p class="section-label caption-3">Legal</p>
-    <h1 class="heading-1">Privacy</h1>
-    <p class="body-2 legal-lede">This site is static. It sets no cookies, runs no analytics, and ships no advertising pixels.</p>
+    <p class="section-label mono-label">Legal</p>
+    <h1>Privacy</h1>
+    <p class="legal-lede">This site is static. It sets no cookies, runs no analytics, and ships no advertising pixels.</p>
 
     <div class="legal-body">
       <section>
-        <h2 class="title-1">What is stored on your device</h2>
-        <p class="body-3">One session storage entry caches your public GitHub counters for the length of your visit. It holds repository, star and follower counts only. Closing the tab clears it.</p>
+        <h2>What is stored on your device</h2>
+        <p>Nothing persistent. The page holds its GitHub counters in memory for the length of your visit and clears them when the tab closes. No local storage, no session storage, no identifiers.</p>
       </section>
 
       <section>
-        <h2 class="title-1">Third party requests</h2>
-        <p class="body-3">The page loads fonts from Google Fonts, animation and 3D libraries from the esm.sh content delivery network, and public profile counts from the GitHub API. Those services receive your IP address and user agent as part of a normal request. Their own privacy policies apply.</p>
+        <h2>Third party requests</h2>
+        <p>The page loads Geist from Google Fonts and public profile counts from the GitHub API. Those services receive your IP address and user agent as part of a normal request, and their own privacy policies apply. Nothing else leaves your browser.</p>
       </section>
 
       <section>
-        <h2 class="title-1">No accounts, no forms</h2>
-        <p class="body-3">There is no contact form and no login. Every contact link opens an external service, and that service handles what you send.</p>
+        <h2>No accounts, no forms</h2>
+        <p>There is no contact form and no login. JARVIS runs entirely in your browser against a local knowledge base; questions are never transmitted. Every contact link opens an external service, and that service handles what you send.</p>
       </section>
 
       <section>
-        <h2 class="title-1">Questions</h2>
-        <p class="body-3">Ask on <a href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer">LinkedIn</a> or open an issue on <a href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+        <h2>Questions</h2>
+        <p>Ask on <a href="https://www.linkedin.com/in/imran407704/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, email <a href="mailto:imran407704@gmail.com">imran407704@gmail.com</a>, or open an issue on <a href="https://github.com/Imran407704" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
       </section>
     </div>
 
-    <p class="caption-5 legal-foot">Last updated 11 November 2026.</p>
+    <p class="legal-foot mono-label">Last updated 12 November 2026.</p>
   </main>
 </body>
 </html>

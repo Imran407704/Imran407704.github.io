@@ -1,39 +1,52 @@
 # Imran Shaikh — portfolio
 
-A static, dark-theme portfolio with a liquid-glass surface system and an interactive
-Three.js hero. No build step, no framework, no bundler: every file is served as-is by
-GitHub Pages.
+A static, Ironman-themed portfolio for Imran Shaikh, penetration tester and red teamer.
+No build step, no framework, no bundler: every file is served as-is by GitHub Pages.
+
+The visual system is graphite and crimson with gold plating and an arc-reactor cyan
+accent, built on a Vercel-Minimal structure: hairline borders, pill controls at 40px,
+400-weight display type with negative tracking, and generous whitespace.
 
 ## What is inside
 
 ```
 portfolio/
-├─ index.html          Main page: hero, manifesto, work, arsenal, about, broadcast, contact
+├─ index.html          Hero, mission, profile, experience, arsenal, projects, credentials, contact, JARVIS
 ├─ privacy.html        Privacy page
 ├─ terms.html          Terms page
 ├─ 404.html            Branded not-found page (GitHub Pages serves this automatically)
-├─ css/style.css       Design tokens, glass system, layout, responsive rules, reduced motion
-├─ js/main.js          Lenis smooth scroll, command palette, mobile menu, reveals, tilt, terminal, live GitHub stats
-├─ js/three-scene.js   Three.js hero crystal, orbital rings, dust field, pointer parallax and drag
+├─ css/style.css       Design tokens, HUD layer, layout, components, responsive, reduced motion
+├─ js/main.js          Nav, reveals, counters, card deploy, live GitHub stats, JARVIS/FRIDAY assistant
 └─ assets/
-   ├─ avatar.jpg       Profile photo
-   ├─ favicon.svg      Favicon
+   ├─ avatar.jpg       Profile photo (base state of the hero portrait)
+   ├─ ironman.svg      Suit revealed on hover / MARK LXXXV toggle
+   ├─ favicon.svg      Arc reactor favicon
+   ├─ apple-touch-icon.png
    ├─ og.svg           Source for the social preview image
    └─ og.png           Rendered 1200×630 social preview
 ```
+
+## Theme and interactions
+
+- **Portrait deploy**: hovering the hero portrait (or focusing the MARK LXXXV button)
+  swaps the photo for the suit. The toggle sets `aria-pressed` for keyboard and touch
+  users, and the readout switches from `HUMAN / ONLINE` to `MARK LXXXV / ONLINE`.
+- **JARVIS**: a scripted local assistant. `Ctrl/Cmd + K` opens it, `Esc` closes it,
+  the persona button switches between JARVIS and FRIDAY. Answers come from a keyword
+  knowledge base in `js/main.js`; nothing is sent to a server.
+- **Live telemetry**: repository, star and follower counts come from the public GitHub
+  API and fall back to the static numbers in the HTML if the request fails.
+- **Motion**: CSS transitions plus `IntersectionObserver`. The tagline lights up word
+  by word as it enters the viewport. `prefers-reduced-motion` disables all of it.
 
 ## Stack
 
 | Layer | Choice | Why |
 |---|---|---|
-| 3D | Three.js r187 via `esm.sh` | Faceted fresnel shader crystal, rings, dust particles |
-| Smooth scroll | Lenis 1.3.27 | Pointer and wheel smoothing, honours `prefers-reduced-motion` |
-| Motion | anime.js 4.5.0 | Stat counters; everything else is CSS transitions and IntersectionObserver |
 | Type | Geist + Geist Mono | Loaded from Google Fonts |
-| Data | GitHub REST API | Repo, star and follower counts, cached in `sessionStorage` for the visit |
-
-Libraries load as ES modules from a CDN, so there is no `node_modules` and no build.
-If a CDN request fails, the page degrades: no 3D, no counters, native scrolling.
+| Motion | CSS + `IntersectionObserver` + `requestAnimationFrame` | Counters and reveals, no animation dependency |
+| Data | GitHub REST API | Repo, star and follower counts, no token, no cache storage |
+| Everything else | Vanilla HTML, CSS, JS | Zero dependencies, zero build |
 
 ## Local preview
 
@@ -48,57 +61,55 @@ python -m http.server 4173 --directory portfolio
 ```
 
 Then open `http://localhost:4173/`. Opening `index.html` directly with `file://` will
-break the ES module imports and the GitHub API call, so use a server.
+block the GitHub API request, so use a server for the live counters.
 
 ## Deploy to GitHub Pages
 
-The site is designed to live at the root of `Imran407704/Imran407704.github.io`.
+The site lives at the root of `Imran407704/Imran407704.github.io`, which publishes the
+`main` branch at `https://imran407704.github.io/`.
 
 ```powershell
-# 1. Copy the built files into a clone of the Pages repository
 git clone https://github.com/Imran407704/Imran407704.github.io.git
 Copy-Item -Path portfolio\* -Destination Imran407704.github.io\ -Recurse -Force
-
-# 2. Commit and push
 cd Imran407704.github.io
 git add .
-git commit -m "Rebuild portfolio: dark glass system and 3D hero"
+git commit -m "Rebuild portfolio: STARK OS Ironman theme"
 git push origin main
 ```
-
-GitHub Pages serves `main` from the repository root, so the site is live at
-`https://imran407704.github.io/` within a minute or two.
 
 Notes:
 
 - `404.html` must stay at the repository root for GitHub Pages to use it.
-- Absolute paths inside `404.html` (`/css/style.css`, `/assets/favicon.svg`) assume
-  the site is served from the domain root, which is the case for a user Pages site.
-- If the site ever moves to a project path such as `/portfolio/`, change the
-  `canonical`, `og:url`, `og:image` and `twitter:image` URLs in `index.html` and
-  switch the `404.html` asset paths to relative ones.
+- Absolute paths inside `404.html` (`/css/style.css`, `/assets/favicon.svg`) assume the
+  site is served from the domain root, which is the case for a user Pages site.
+- If the site moves to a project path such as `/portfolio/`, change the `canonical`,
+  `og:url`, `og:image` and `twitter:image` URLs in `index.html` and switch the `404.html`
+  asset paths to relative ones.
 
 ## Editing content
 
-- **Projects**: each card in the `#work` section of `index.html`. The `data-stars`
-  attribute on the star count is only a fallback; live numbers come from the API.
-- **Toolkit**: the six cards in `#arsenal`.
-- **Copy**: hero headline, manifesto tagline and the about text are plain HTML.
-- **Links**: GitHub, LinkedIn, X and YouTube URLs appear in the header, contact grid,
-  mobile menu and command palette. Search for `imran407704` to find all of them.
-- **Social preview**: edit `assets/og.svg`, then re-render `assets/og.png` at
-  1200×630 so the image stays in sync.
+- **Projects**: each card in `#projects`. `data-stars` is the fallback; live numbers come
+  from the API.
+- **Arsenal**: the six panels inside `#arsenal`.
+- **Copy**: hero headline, mission tagline and profile text are plain HTML.
+- **Assistant**: the `knowledge` array in `js/main.js`. Each entry has `keys` to match and
+  an HTML `answer`. Add an entry, no other wiring needed.
+- **Suit image**: replace `assets/ironman.svg`, or drop in a photo at
+  `assets/ironman.jpg` and change the `portrait-swap` `src` in `index.html` plus its
+  `width`/`height` attributes.
+- **Social preview**: edit `assets/og.svg`, then re-render `assets/og.png` at 1200×630.
 
 ## Accessibility and performance
 
-- Skip link, visible focus rings, labelled icon-only controls, 44px touch targets.
-- Full keyboard support in the command palette (`Ctrl/Cmd + K`, `/`, arrows, `Enter`, `Esc`).
-- `prefers-reduced-motion` disables Lenis, the 3D animation loop, reveals, tilt and the cursor ring.
-- The hero canvas pauses when it scrolls out of view or the tab is hidden.
-- Lighthouse on the local build: Accessibility 100, Best Practices 100, SEO 100.
-- No cookies, no analytics, no trackers.
+- Skip link, visible focus rings, labelled icon-only controls, 40px control height.
+- JARVIS is a non-modal dialog: focus moves to the input on open, returns to the trigger
+  on close, and `Esc` always works.
+- Hover-only information is duplicated by a real button, so keyboard and touch users can
+  deploy the suit.
+- `prefers-reduced-motion` removes reveals, typing effects, marquees and scan lines.
+- No cookies, no analytics, no trackers, no local or session storage.
 
 ## Security note
 
-Never commit a GitHub personal access token to this repository. The GitHub counters
-are read from the public API with no authentication, so no token is needed.
+Never commit a GitHub personal access token to this repository. The GitHub counters are
+read from the public API with no authentication, so no token is needed.
