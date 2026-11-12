@@ -535,3 +535,528 @@ if (jarvis) {
     }
   });
 }
+
+/* ============================================================
+   3D / interactive layer
+   ============================================================ */
+
+/* ---------- preloader ---------- */
+(function preloader() {
+  const root = document.documentElement;
+  if (!root.classList.contains('pl-on')) return;
+
+  const line = $('#pl-line');
+  const bar = $('#pl-bar');
+  const pct = $('#pl-pct');
+  const skip = $('#pl-skip');
+
+  const boot = [
+    'JARVIS · SYSTEMS ONLINE',
+    'CALIBRATING ARC REACTOR',
+    'LOADING MARK LXXXV',
+    'SECURING PERIMETER',
+    'RENDERING HUD LAYER',
+    'WELCOME BACK, SIR',
+  ];
+
+  let p = 0;
+  let li = 0;
+  let done = false;
+
+  function finish() {
+    if (done) return;
+    done = true;
+    if (bar) bar.style.width = '100%';
+    if (pct) pct.textContent = '100%';
+    root.classList.add('pl-done');
+    document.dispatchEvent(new CustomEvent('stark:intro-done'));
+    window.setTimeout(() => {
+      const pl = $('#preloader');
+      if (pl) pl.remove();
+    }, 700);
+  }
+
+  if (skip) skip.addEventListener('click', finish);
+
+  const iv = window.setInterval(() => {
+    if (done) { window.clearInterval(iv); return; }
+    p = Math.min(96, p + 4 + Math.random() * 12);
+    if (bar) bar.style.width = p + '%';
+    if (pct) pct.textContent = Math.round(p) + '%';
+    li = (li + 1) % boot.length;
+    if (line) line.textContent = boot[li];
+  }, 260);
+
+  window.addEventListener('load', () => {
+    window.setTimeout(() => { window.clearInterval(iv); finish(); }, 480);
+  });
+
+  window.setTimeout(() => { window.clearInterval(iv); finish(); }, 4400);
+})();
+
+/* ---------- split characters ---------- */
+function splitChars(el) {
+  if (!el || el.dataset.split === '1') return;
+  el.dataset.split = '1';
+  const text = el.textContent.trim();
+  el.textContent = '';
+  const frag = document.createDocumentFragment();
+  let i = 0;
+
+  text.split(/\s+/).forEach((word, wi, arr) => {
+    const w = document.createElement('span');
+    w.className = 'chw';
+    for (const ch of word) {
+      const s = document.createElement('span');
+      s.className = 'ch';
+      s.textContent = ch;
+      s.style.setProperty('--i', String(i));
+      i += 1;
+      w.appendChild(s);
+    }
+    frag.appendChild(w);
+    if (wi < arr.length - 1) frag.appendChild(document.createTextNode(' '));
+  });
+
+  el.appendChild(frag);
+  el.classList.add('is-split');
+}
+
+function whenIntroDone(fn) {
+  if (document.documentElement.classList.contains('pl-done')) {
+    window.requestAnimationFrame(fn);
+    return;
+  }
+  document.addEventListener('stark:intro-done', fn, { once: true });
+  window.setTimeout(fn, 5200);
+}
+
+const heroTitle = $('#hero-title');
+if (heroTitle) {
+  const lines = $$('.hero-line', heroTitle);
+  if (reduced || !lines.length) {
+    heroTitle.classList.add('is-in');
+  } else {
+    lines.forEach(splitChars);
+    whenIntroDone(() => heroTitle.classList.add('is-in'));
+  }
+}
+
+const wordmark = $('#wordmark');
+if (wordmark) {
+  if (reduced || !('IntersectionObserver' in window)) {
+    wordmark.classList.add('is-in');
+  } else {
+    splitChars(wordmark);
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          wordmark.classList.add('is-in');
+          io.disconnect();
+        });
+      },
+      { threshold: 0.25 }
+    );
+    io.observe(wordmark);
+  }
+}
+
+/* ---------- custom cursor ---------- */
+(function customCursor() {
+  const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (reduced || !fine) return;
+
+  const el = document.createElement('div');
+  el.className = 'cursor';
+  el.setAttribute('aria-hidden', 'true');
+  const label = document.createElement('span');
+  label.className = 'cursor-label';
+  el.appendChild(label);
+  document.body.appendChild(el);
+
+  let tx = -100;
+  let ty = -100;
+  let x = tx;
+  let y = ty;
+  let down = false;
+  let raf = 0;
+  let running = false;
+
+  function loop() {
+    x += (tx - x) * 0.2;
+    y += (ty - y) * 0.2;
+    el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)${down ? ' scale(0.85)' : ''}`;
+    raf = window.requestAnimationFrame(loop);
+  }
+
+  window.addEventListener('pointermove', (e) => {
+    tx = e.clientX;
+    ty = e.clientY;
+    if (!running) {
+      running = true;
+      x = tx;
+      y = ty;
+      el.classList.add('is-on');
+      loop();
+    }
+  }, { passive: true });
+
+  document.addEventListener('mouseover', (e) => {
+    const t = e.target.closest && e.target.closest('[data-cursor], a, button');
+    if (t) {
+      el.classList.add('is-hover');
+      label.textContent = t.getAttribute('data-cursor') || '';
+    } else {
+      el.classList.remove('is-hover');
+      label.textContent = '';
+    }
+  });
+
+  window.addEventListener('pointerdown', () => { down = true; });
+  window.addEventListener('pointerup', () => { down = false; });
+  document.documentElement.addEventListener('mouseleave', () => {
+    el.classList.remove('is-on');
+    running = false;
+    window.cancelAnimationFrame(raf);
+  });
+})();
+
+/* ---------- magnetic buttons ---------- */
+(function magnetic() {
+  const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (reduced || !fine) return;
+
+  $$('.btn').forEach((btn) => {
+    btn.addEventListener('pointermove', (e) => {
+      const r = btn.getBoundingClientRect();
+      const mx = (e.clientX - r.left - r.width / 2) / (r.width / 2);
+      const my = (e.clientY - r.top - r.height / 2) / (r.height / 2);
+      btn.style.transform = `translate(${(mx * 6).toFixed(1)}px, ${(my * 4).toFixed(1)}px)`;
+    });
+    btn.addEventListener('pointerleave', () => {
+      btn.style.transform = '';
+    });
+  });
+})();
+
+/* ---------- portrait tilt ---------- */
+(function tilt() {
+  const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (reduced || !fine) return;
+  const media = $('.portrait-media');
+  const zone = $('#portrait');
+  if (!media || !zone) return;
+
+  zone.addEventListener('pointermove', (e) => {
+    const r = media.getBoundingClientRect();
+    const mx = (e.clientX - r.left) / r.width - 0.5;
+    const my = (e.clientY - r.top) / r.height - 0.5;
+    media.style.transform =
+      `perspective(900px) rotateX(${(-my * 7).toFixed(2)}deg) rotateY(${(mx * 9).toFixed(2)}deg)`;
+  });
+  zone.addEventListener('pointerleave', () => {
+    media.style.transform = '';
+  });
+})();
+
+/* ---------- hero 3D scene ---------- */
+(async function initHero3D() {
+  const canvas = $('#hero-fx');
+  const hero = $('.hero');
+  if (!canvas || !hero) return;
+  if (reduced) return;
+
+  let T;
+  try {
+    T = await import('https://esm.sh/three@0.169.0');
+  } catch {
+    canvas.remove();
+    return;
+  }
+  if (!T || !T.WebGLRenderer) { canvas.remove(); return; }
+
+  let renderer;
+  try {
+    renderer = new T.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
+  } catch {
+    canvas.remove();
+    return;
+  }
+  renderer.setClearColor(0x000000, 0);
+
+  const scene = new T.Scene();
+  const camera = new T.PerspectiveCamera(50, 1, 0.1, 100);
+  camera.position.set(0, 0, 9.5);
+
+  const group = new T.Group();
+  scene.add(group);
+
+  /* reactor rings */
+  const goldRing = new T.Mesh(
+    new T.TorusGeometry(3.3, 0.045, 10, 140),
+    new T.MeshBasicMaterial({ color: 0xf2c14e, transparent: true, opacity: 0.55 })
+  );
+  const crimsonRing = new T.Mesh(
+    new T.TorusGeometry(3.9, 0.035, 10, 150),
+    new T.MeshBasicMaterial({ color: 0xe62429, transparent: true, opacity: 0.4 })
+  );
+  crimsonRing.rotation.x = Math.PI / 2.6;
+  crimsonRing.rotation.y = 0.4;
+
+  const cyanRingA = new T.Mesh(
+    new T.TorusGeometry(2.75, 0.02, 8, 120),
+    new T.MeshBasicMaterial({ color: 0x6fe3f5, transparent: true, opacity: 0.4 })
+  );
+  cyanRingA.rotation.x = -0.5;
+  const cyanRingB = new T.Mesh(
+    new T.TorusGeometry(4.5, 0.018, 8, 160),
+    new T.MeshBasicMaterial({ color: 0x6fe3f5, transparent: true, opacity: 0.22 })
+  );
+  cyanRingB.rotation.x = 1.1;
+  cyanRingB.rotation.z = -0.35;
+
+  group.add(goldRing, crimsonRing, cyanRingA, cyanRingB);
+
+  /* core */
+  const coreGroup = new T.Group();
+  const core = new T.Mesh(
+    new T.SphereGeometry(0.85, 32, 32),
+    new T.MeshBasicMaterial({ color: 0xe9fdff })
+  );
+  const cage = new T.Mesh(
+    new T.IcosahedronGeometry(1.7, 1),
+    new T.MeshBasicMaterial({ color: 0x6fe3f5, wireframe: true, transparent: true, opacity: 0.3 })
+  );
+  const octa = new T.Mesh(
+    new T.OctahedronGeometry(2.35, 0),
+    new T.MeshBasicMaterial({ color: 0xf2c14e, wireframe: true, transparent: true, opacity: 0.4 })
+  );
+  coreGroup.add(core, cage, octa);
+  group.add(coreGroup);
+
+  /* glow sprite */
+  const glowCanvas = document.createElement('canvas');
+  glowCanvas.width = glowCanvas.height = 128;
+  const gctx = glowCanvas.getContext('2d');
+  const grad = gctx.createRadialGradient(64, 64, 0, 64, 64, 64);
+  grad.addColorStop(0, 'rgba(160, 240, 255, 0.55)');
+  grad.addColorStop(0.35, 'rgba(111, 227, 245, 0.18)');
+  grad.addColorStop(1, 'rgba(111, 227, 245, 0)');
+  gctx.fillStyle = grad;
+  gctx.fillRect(0, 0, 128, 128);
+  const glowTex = new T.CanvasTexture(glowCanvas);
+  const glow = new T.Sprite(new T.SpriteMaterial({ map: glowTex, transparent: true, depthWrite: false, opacity: 0.75 }));
+  glow.scale.set(7.5, 7.5, 1);
+  group.add(glow);
+
+  /* hex plates */
+  const plates = new T.Group();
+  const plateGeo = new T.BoxGeometry(0.5, 0.3, 0.05);
+  for (let i = 0; i < 10; i += 1) {
+    const a = (i / 10) * Math.PI * 2;
+    const plate = new T.Mesh(
+      plateGeo,
+      new T.MeshBasicMaterial({ color: 0xe62429, transparent: true, opacity: 0.16 })
+    );
+    plate.position.set(Math.cos(a) * 5.15, Math.sin(a) * 5.15 * 0.72, Math.sin(a) * 1.2);
+    plate.rotation.z = a + Math.PI / 2;
+    plates.add(plate);
+  }
+  group.add(plates);
+
+  /* particle field */
+  const isSmall = window.innerWidth < 820;
+  const count = isSmall ? 280 : 560;
+  const pos = new Float32Array(count * 3);
+  for (let i = 0; i < count; i += 1) {
+    pos[i * 3] = (Math.random() - 0.5) * 18;
+    pos[i * 3 + 1] = (Math.random() - 0.5) * 11;
+    pos[i * 3 + 2] = (Math.random() - 0.5) * 9;
+  }
+  const pGeo = new T.BufferGeometry();
+  pGeo.setAttribute('position', new T.BufferAttribute(pos, 3));
+  const dust = new T.Points(
+    pGeo,
+    new T.PointsMaterial({ color: 0x6fe3f5, size: 0.045, transparent: true, opacity: 0.5, depthWrite: false })
+  );
+  scene.add(dust);
+
+  /* click pulse rings */
+  const pulses = [];
+  const pulseGeo = new T.RingGeometry(0.96, 1, 64);
+  function firePulse() {
+    if (pulses.length > 4) return;
+    const mesh = new T.Mesh(
+      pulseGeo,
+      new T.MeshBasicMaterial({ color: 0x8fe8ff, transparent: true, opacity: 0.75, side: T.DoubleSide, depthWrite: false })
+    );
+    mesh.position.copy(group.position);
+    mesh.userData.age = 0;
+    scene.add(mesh);
+    pulses.push(mesh);
+  }
+
+  /* layout */
+  function layout() {
+    const r = hero.getBoundingClientRect();
+    const w = Math.max(1, r.width);
+    const h = Math.max(1, r.height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    const wide = w / h > 1.05;
+    if (wide) {
+      group.position.x = Math.min(2.4, (w / h) * 1.3);
+      group.position.y = 0.15;
+      group.scale.setScalar(1);
+      glow.scale.set(7.5, 7.5, 1);
+    } else {
+      /* small screens: park the reactor behind the portrait, out of the copy */
+      group.position.x = 0.4;
+      group.position.y = -3.1;
+      group.scale.setScalar(0.58);
+      glow.scale.set(5.5, 5.5, 1);
+    }
+  }
+  layout();
+
+  /* interaction state */
+  const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  let mx = 0;
+  let my = 0;
+  let dragging = false;
+  let moved = 0;
+  let lastX = 0;
+  let lastY = 0;
+  let velX = 0;
+  let velY = 0;
+
+  if (fine) {
+    hero.addEventListener('pointermove', (e) => {
+      const r = hero.getBoundingClientRect();
+      mx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+      my = ((e.clientY - r.top) / r.height - 0.5) * 2;
+    }, { passive: true });
+  }
+
+  hero.addEventListener('pointerdown', (e) => {
+    if (e.target.closest && e.target.closest('a, button, input, .hero-copy, .portrait, .jarvis')) return;
+    dragging = true;
+    moved = 0;
+    lastX = e.clientX;
+    lastY = e.clientY;
+  });
+
+  window.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    const dx = e.clientX - lastX;
+    const dy = e.clientY - lastY;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    moved += Math.abs(dx) + Math.abs(dy);
+    velY += dx * 0.0022;
+    velX += dy * 0.0016;
+  }, { passive: true });
+
+  window.addEventListener('pointerup', () => {
+    if (dragging && moved < 7) firePulse();
+    dragging = false;
+  });
+
+  /* visibility control */
+  let inView = true;
+  let visible = !document.hidden;
+  let raf = 0;
+
+  const io = new IntersectionObserver((entries) => {
+    inView = entries[0].isIntersecting;
+    sync();
+  }, { threshold: 0.02 });
+  io.observe(hero);
+
+  document.addEventListener('visibilitychange', () => {
+    visible = !document.hidden;
+    sync();
+  });
+
+  function sync() {
+    const shouldRun = inView && visible;
+    if (shouldRun && !raf) {
+      clock = performance.now();
+      raf = window.requestAnimationFrame(animate);
+    } else if (!shouldRun && raf) {
+      window.cancelAnimationFrame(raf);
+      raf = 0;
+    }
+  }
+
+  window.addEventListener('resize', layout);
+  if ('ResizeObserver' in window) new ResizeObserver(layout).observe(hero);
+
+  /* animate */
+  let clock = performance.now();
+  let t = 0;
+
+  canvas.classList.add('is-live');
+  raf = window.requestAnimationFrame(animate);
+
+  function animate(now) {
+    const dt = Math.min(0.05, (now - clock) / 1000);
+    clock = now;
+    t += dt;
+
+    /* inertia */
+    velY *= 0.94;
+    velX *= 0.94;
+
+    group.rotation.y = t * 0.12 + velY;
+    group.rotation.x = -0.14 + Math.sin(t * 0.4) * 0.05 + velX;
+    group.rotation.z = Math.sin(t * 0.23) * 0.06;
+
+    group.position.y += Math.sin(t * 0.8) * 0.0025;
+
+    /* scroll parallax */
+    const heroH = hero.offsetHeight || 1;
+    const prog = Math.min(1, Math.max(0, window.scrollY / heroH));
+    dust.position.y = prog * 2.4;
+    camera.position.y = -my * 0.5 - prog * 0.6;
+    camera.position.x = mx * 0.75;
+    camera.lookAt(0, 0, 0);
+
+    coreGroup.rotation.y += dt * 0.5;
+    coreGroup.rotation.x += dt * 0.22;
+    octa.rotation.y -= dt * 0.35;
+    cage.rotation.z += dt * 0.18;
+    const cs = 1 + Math.sin(t * 2.4) * 0.04;
+    core.scale.set(cs, cs, cs);
+    glow.material.opacity = 0.65 + Math.sin(t * 2.4) * 0.1;
+
+    crimsonRing.rotation.z += dt * 0.16;
+    cyanRingA.rotation.z += dt * 0.3;
+    cyanRingB.rotation.z -= dt * 0.2;
+    plates.rotation.z += dt * 0.08;
+
+    dust.rotation.y += dt * 0.02;
+
+    /* pulses */
+    for (let i = pulses.length - 1; i >= 0; i -= 1) {
+      const p = pulses[i];
+      p.userData.age += dt;
+      const a = p.userData.age;
+      const k = a / 0.9;
+      p.scale.setScalar(1 + k * 9);
+      p.material.opacity = 0.75 * (1 - k);
+      p.quaternion.copy(camera.quaternion);
+      if (k >= 1) {
+        scene.remove(p);
+        p.material.dispose();
+        pulses.splice(i, 1);
+      }
+    }
+
+    renderer.render(scene, camera);
+    raf = window.requestAnimationFrame(animate);
+  }
+})();

@@ -2,6 +2,24 @@
 <html lang="en" data-theme="stark">
 <head>
   <meta charset="utf-8">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      try {
+        var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+        var type = nav ? nav.type : 'navigate';
+        var seen = false;
+        try { seen = sessionStorage.getItem('plSeen') === '1'; } catch (e) {}
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (type !== 'back_forward' && !seen && !reduce) {
+          d.classList.add('pl-on');
+          try { sessionStorage.setItem('plSeen', '1'); } catch (e) {}
+          if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        }
+      } catch (e) {}
+      window.setTimeout(function () { d.classList.add('pl-done'); }, 4200);
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Imran Shaikh | Penetration tester and red teamer</title>
   <meta name="description" content="Imran Shaikh is a penetration tester at ANB Solutions, a CERT-In empanelled firm. Web, Android, iOS and API security, red team operations and CERT-In compliant VAPT for BFSI and telecom clients.">
@@ -73,6 +91,24 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="pl-wrap">
+      <svg class="pl-arc" viewBox="0 0 120 120" aria-hidden="true">
+        <circle class="ring r1" cx="60" cy="60" r="52"/>
+        <circle class="ring r2" cx="60" cy="60" r="40"/>
+        <circle class="ring r3" cx="60" cy="60" r="28"/>
+        <circle class="core" cx="60" cy="60" r="10"/>
+      </svg>
+      <p class="pl-name">Imran <em>Shaikh</em></p>
+      <p class="pl-line mono-label" id="pl-line">JARVIS &middot; SYSTEMS ONLINE</p>
+    </div>
+    <div class="pl-foot">
+      <div class="pl-meter"><i id="pl-bar"></i></div>
+      <p class="pl-pct mono-label" id="pl-pct">0%</p>
+    </div>
+    <button class="pl-skip mono-label" type="button" id="pl-skip">Skip intro</button>
+  </div>
 
   <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
   <div class="hud-grid" aria-hidden="true"></div>
@@ -150,6 +186,7 @@
 
   <main id="main">
     <section class="hero" id="top">
+      <canvas class="hero-fx" id="hero-fx" aria-hidden="true"></canvas>
       <div class="hero-inner">
         <div class="hero-copy">
           <p class="status-line mono">
@@ -161,9 +198,9 @@
             <span>3.5+ YRS</span>
           </p>
 
-          <h1 class="display hero-title">
-            Offensive security,<br>
-            precision engineered.
+          <h1 class="display hero-title" id="hero-title">
+            <span class="hero-line">Offensive security,</span><br>
+            <span class="hero-line">precision engineered.</span>
           </h1>
 
           <p class="lede hero-lede">
@@ -203,9 +240,9 @@
           </dl>
         </div>
 
-        <div class="hero-visual">
+        <div class="hero-visual" data-cursor="Drag">
           <figure class="portrait" id="portrait">
-            <div class="portrait-media">
+            <div class="portrait-media" data-cursor="Deploy">
               <img class="portrait-img portrait-base" src="assets/avatar.jpg" alt="Imran Shaikh standing on a concrete slab in a beige shirt" width="1000" height="1250" decoding="async">
               <img class="portrait-img portrait-swap" src="assets/ironman.svg" alt="" aria-hidden="true" width="1000" height="1250" loading="lazy" decoding="async">
               <span class="portrait-scan" aria-hidden="true"></span>
@@ -471,7 +508,7 @@
       </header>
 
       <div class="work-grid">
-        <article class="project project-featured reveal">
+        <article class="project project-featured reveal" data-cursor="View">
           <div class="project-body">
             <div class="project-top">
               <span class="project-index mono-label">P-01</span>
@@ -511,7 +548,7 @@
           </div>
         </article>
 
-        <article class="project reveal">
+        <article class="project reveal" data-cursor="View">
           <div class="project-top">
             <span class="project-index mono-label">P-02</span>
             <span class="project-kind mono-label">Research archive</span>
@@ -527,7 +564,7 @@
           </div>
         </article>
 
-        <article class="project reveal">
+        <article class="project reveal" data-cursor="View">
           <div class="project-top">
             <span class="project-index mono-label">P-03</span>
             <span class="project-kind mono-label">Recon automation</span>
@@ -543,7 +580,7 @@
           </div>
         </article>
 
-        <article class="project reveal">
+        <article class="project reveal" data-cursor="View">
           <div class="project-top">
             <span class="project-index mono-label">P-04</span>
             <span class="project-kind mono-label">URL harvesting</span>
@@ -559,7 +596,7 @@
           </div>
         </article>
 
-        <article class="project reveal">
+        <article class="project reveal" data-cursor="View">
           <div class="project-top">
             <span class="project-index mono-label">P-05</span>
             <span class="project-kind mono-label">Workflow</span>
@@ -738,6 +775,8 @@
         <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
       </a>
     </div>
+    <p class="footer-wordmark" id="wordmark" aria-hidden="true">IMRAN SHAIKH</p>
+
     <div class="footer-bottom mono-label">
       <p>&copy; <span id="year">2026</span> Imran Shaikh. Mumbai, India.</p>
       <p><a href="privacy.html">Privacy</a><span class="footer-sep">/</span><a href="terms.html">Terms</a><span class="footer-sep">/</span><span>No cookies. No trackers.</span></p>
@@ -779,7 +818,7 @@
   </div>
 
   <noscript>
-    <p class="noscript">JavaScript is off. All content and links still work. JARVIS and the hover deploy need JavaScript.</p>
+    <p class="noscript">JavaScript is off. All content and links still work. The intro, the 3D hero, the custom cursor and JARVIS need JavaScript.</p>
   </noscript>
 
   <script type="module" src="js/main.js"></script>
