@@ -728,6 +728,13 @@ html.pl-done .preloader {
 
 .hero-photo:hover .hp-tag { color: #fff; border-color: rgba(224, 42, 48, 0.6); }
 
+/* touch devices have no hover — keep the photo gently lit instead of dead */
+@media (hover: none) {
+  .hp-img { filter: saturate(1) brightness(1); }
+  .hp-glow { opacity: 0.65; }
+  .hp-tag { color: #fff; border-color: rgba(224, 42, 48, 0.6); }
+}
+
 .scroll-hint {
   position: absolute;
   bottom: 24px;
