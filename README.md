@@ -23,11 +23,11 @@ portfolio/
 ├─ 404.html            Branded not-found page (GitHub Pages serves this automatically)
 ├─ css/style.css       Design tokens, all sections, responsive, reduced motion, print
 ├─ js/main.js          Preloader, cursor, header, menu, split text, scrub text,
-│                      marquee fills, counters, pinned timeline, mask toggle,
-│                      GitHub stars, KAREN/JARVIS assistant, Three.js hero scene
+│                      marquee fills, counters, pinned timeline, GitHub stars,
+│                      KAREN/JARVIS assistant, Three.js hero scene
 └─ assets/
-   ├─ avatar.jpg       Profile photo (base state of the hero portrait)
-   ├─ spiderman.svg    Masked suit art revealed on hover / MASK ON toggle
+   ├─ avatar.jpg       Hero portrait (blue/orange rim-light headshot), also
+   │                   used in the I'm Both section
    ├─ favicon.svg      Spider emblem favicon
    ├─ apple-touch-icon.png
    ├─ og.svg           Source for the social preview image
@@ -36,9 +36,10 @@ portfolio/
 
 ## Theme and interactions
 
-- **Mask on / off**: hovering the hero portrait (or pressing the `MASK ON` button)
-  swaps the photo for the spidey mask art. The toggle sets `aria-pressed` for
-  keyboard and touch users, and the tag flips between `MASK OFF` and `MASK ON`.
+- **Portrait hover**: the hero photo sits on a black card. Hovering lifts it,
+  zooms it slightly, restores full colour and fades in a red/blue rim glow with
+  a faint web texture from the top corner. `prefers-reduced-motion` disables
+  the movement.
 - **KAREN**: a scripted local assistant. `Ctrl/Cmd + K` opens it, `Esc` closes it,
   and the persona button switches it to JARVIS. Answers come from a keyword
   knowledge base in `js/main.js`; nothing is sent to a server.
@@ -110,8 +111,7 @@ Notes:
 - **Copy**: hero, intro and about text are plain HTML.
 - **Assistant**: the `knowledge` array in `js/main.js`. Each entry has `keys` to match and
   an HTML `answer`. Add an entry, no other wiring needed.
-- **Suit image**: replace `assets/spiderman.svg` (viewBox 1000×1250), or swap the
-  `hp-suit` `src` in `index.html` and keep its `width`/`height` attributes.
+- **Hero portrait**: replace `assets/avatar.jpg` (1000×798 or similar 5:4 crop).
 - **Social preview**: edit `assets/og.svg`, then re-render `assets/og.png` at 1200×630
   (for example with `@resvg/resvg-js`).
 

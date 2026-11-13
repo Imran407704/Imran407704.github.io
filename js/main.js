@@ -484,27 +484,6 @@ window.addEventListener('resize', onScroll, { passive: true });
 onScroll();
 
 /* ============================================================
-   Mask on / off — hero portrait suit swap
-   ============================================================ */
-(function maskToggle() {
-  const photo = $('#heroPhoto');
-  const btn = $('#maskBtn');
-  const tag = $('[data-hp-tag]');
-  if (!photo || !btn) return;
-
-  function setMask(on) {
-    photo.classList.toggle('is-mask', on);
-    btn.setAttribute('aria-pressed', String(on));
-    btn.textContent = on ? 'MASK OFF' : 'MASK ON';
-    if (tag) tag.textContent = on ? 'MASK ON' : 'MASK OFF';
-  }
-
-  btn.addEventListener('click', () => {
-    setMask(!photo.classList.contains('is-mask'));
-  });
-})();
-
-/* ============================================================
    Magnetic buttons
    ============================================================ */
 (function magnetic() {
@@ -626,7 +605,7 @@ const knowledge = [
   {
     keys: ['spider', 'spiderman', 'spidey', 'mask', 'suit', 'karen', 'jarvis', 'superhero', 'power', 'web'],
     answer:
-      'Spider-Man, obviously. This folio wears the classic red and blue — hover the portrait or press <strong>MASK ON</strong> to web up. With great power comes great responsibility.',
+      'Spider-Man, obviously. This folio wears the classic red and blue — hover the portrait and the red and blue light up around it. With great power comes great responsibility.',
   },
   {
     keys: ['who', 'imran', 'about', 'background', 'summary', 'yourself'],
