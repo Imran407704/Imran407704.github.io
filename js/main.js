@@ -605,7 +605,7 @@ const knowledge = [
   {
     keys: ['spider', 'spiderman', 'spidey', 'mask', 'suit', 'karen', 'jarvis', 'superhero', 'power', 'web'],
     answer:
-      'Spider-Man, obviously. This folio wears the classic red and blue — hover the portrait and the red and blue light up around it. With great power comes great responsibility.',
+      'Spider-Man, obviously. This folio wears the classic red and blue — hover the portrait and the spidey mask fades in over the photo. With great power comes great responsibility.',
   },
   {
     keys: ['who', 'imran', 'about', 'background', 'summary', 'yourself'],

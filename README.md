@@ -28,6 +28,7 @@ portfolio/
 └─ assets/
    ├─ avatar.jpg       Hero portrait (blue/orange rim-light headshot), also
    │                   used in the I'm Both section
+   ├─ mask.svg         Spidey mask revealed over the portrait on hover
    ├─ favicon.svg      Spider emblem favicon
    ├─ apple-touch-icon.png
    ├─ og.svg           Source for the social preview image
@@ -38,8 +39,9 @@ portfolio/
 
 - **Portrait hover**: the hero photo sits on a black card. Hovering lifts it,
   zooms it slightly, restores full colour and fades in a red/blue rim glow with
-  a faint web texture from the top corner. `prefers-reduced-motion` disables
-  the movement.
+  a faint web texture from the top corner — then a hand-drawn spidey mask
+  (`assets/mask.svg`) fades in over the photo, full bleed, so the card becomes
+  the mask. `prefers-reduced-motion` disables the movement.
 - **KAREN**: a scripted local assistant. `Ctrl/Cmd + K` opens it, `Esc` closes it,
   and the persona button switches it to JARVIS. Answers come from a keyword
   knowledge base in `js/main.js`; nothing is sent to a server.
